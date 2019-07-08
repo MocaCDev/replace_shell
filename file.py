@@ -15,7 +15,7 @@ class o_s:
 	def __init__(self, host, port,fi):
 		self.host=host
 		self.port=port
-		self.con=Fale
+		self.con=False
 		self.file=fi
 	def _check_(self):
 		check_status=0
