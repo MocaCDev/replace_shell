@@ -37,7 +37,6 @@ class o_s:
 # this is where shell.sh writes into the file
 # write = os.system('sh shell.sh')
 
-with f as file_:
-	o = o_s()
-	o._get_()
-	o.run()
+o = o_s()
+o._get_()
+o.run()
