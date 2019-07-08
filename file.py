@@ -24,13 +24,14 @@ class o_s:
 		self.file = file_
 		self.con = Fale
 	def run(self):
-		with p,h as self.host, self.port:
+		with h,p,f as self.host, self.port, self.file:
 			p = True
 			h = True
+			f = True
 			while p and h:
 				self.con = True
 				with c as self.con:
-					c = p, h
+					c = p, h, f
 					return c
 
 # this is where shell.sh writes into the file
@@ -40,4 +41,3 @@ with f as file_:
 	o = o_s()
 	o._get_()
 	o.run()
-	return f
