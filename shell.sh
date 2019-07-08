@@ -30,3 +30,4 @@ ask()
 }
 show
 ask
+exit
