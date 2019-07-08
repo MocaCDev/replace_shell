@@ -28,19 +28,20 @@ class o_s:
 					return c
 
 # this is where shell.sh writes into the file
-write = os.system('sh shell.sh')
+# write = os.system('sh shell.sh')
 
 # Defining the main file(.py)
 file_ = 'file.py'
 
 REQUIRE = {
-	"requires":"python3"	
+	"requires":["python3"]
 }
 USES = {
 	"uses":"python3",
 	"import_extends":"os"
 }
-if USES in file_:
+
+if 'python3' in USES and 'python3' in REQUIRE['requires']:
 	o = o_s()
 	o._set_()
 	o.run()
