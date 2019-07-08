@@ -5,24 +5,24 @@
 # For Termux
 
 import os
+from colorama import Fore
 
 
 # Defining the main file(.py)
 file_ = open('file.py','r')
 
 class o_s:
-	def __init__(self):
-		self.host
-		self.port
-		self.con
-		self.file
-	def _set_(self):
-		def_port = 18080
-		self.port = def_port
-		def_host = '0.0.0.0'
-		self.host = def_host
-		self.file = file_
-		self.con = Fale
+	def __init__(self, host, port,fi):
+		self.host=host
+		self.port=port
+		self.con=Fale
+		self.file=fi
+	def _check_(self):
+		check_status=0
+		if not self.con == True:
+			self.con=False
+			self.status=check_status
+		return self.status
 	def run(self):
 		with h,p,f as self.host, self.port, self.file:
 			p = True
@@ -37,6 +37,12 @@ class o_s:
 # this is where shell.sh writes into the file
 # write = os.system('sh shell.sh')
 
-o = o_s()
-o._get_()
+host = input(Fore.RED+Style.BRIGHT+'Host >> ')
+if host == '':
+	host == '0.0.0.0'
+port = input(Fore.RED+Style.BRIGHT+'Port >> ')
+if port == '':
+	port == '18080'
+o = o_s(host,port,file_)
+o._check_()
 o.run()
