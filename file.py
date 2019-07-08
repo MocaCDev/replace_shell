@@ -11,11 +11,11 @@ import os
 file_ = open('file.py','r')
 
 class o_s:
-	def __init__(self, host, port, con, fi):
-		self.host = host
-		self.port = port
-		self.con = con
-		self.file = fi
+	def __init__(self):
+		self.host
+		self.port
+		self.con
+		self.file
 	def _set_(self):
 		def_port = 18080
 		self.port = def_port
