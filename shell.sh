@@ -13,8 +13,7 @@ t-o for termux-open\ncat\np.2 for python2\ncl for clear\nr f for rm -rf File_Bei
 i for import..file.py==python_code_here\n!THERE IS ONLY ONE FILE THIS FILE CAN WRITE TO!"
 elif [ $shell == 'i']
 then
+  touch file.py
   read -p "import..file.py== " write
-  python << EOF
-  $write
-  EOF
+  echo "$write">>file.py
 fi
