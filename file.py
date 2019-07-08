@@ -33,11 +33,27 @@ class o_s:
 
 host = input(Fore.GREEN+Style.BRIGHT+'Host >> ')
 if host == '':
-	host == '0.0.0.0'
+	err = True
+	while err:
+		print(Fore.RED+'There was an error: User did not input a host')
+		host = input(Fore.GREEN+Style.BRIGHT+'Host >> ')
+		if not host == '':
+			err=False
+			break
+		else:
+			continue
 port = input(Fore.GREEN+Style.BRIGHT+'Port >> ')
 if port == '':
-	port == '18080'
-while not port == '' and not host == '' or port == '18080' or host == '0.0.0.0':
+	err = True
+	while err:
+		print(Fore.RED+'There was an error: User did not input a port')
+		port = input(Fore.GREEN+Style.BRIGHT+'Port >> ')
+		if not port == '':
+			err=False
+			break
+		else:
+			continue
+while not port == '' and not host == '':
 	o = o_s(host,port,file_)
 	o._check_()
 	o.run()
