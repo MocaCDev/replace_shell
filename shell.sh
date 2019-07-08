@@ -25,9 +25,7 @@ ask()
   elif [ $shell == 'e' ]
   then
     echo -e "——►Come back again!"
-    exit
   fi
 }
 show
 ask
-exit
