@@ -9,8 +9,8 @@ the terminal, and opening,downloading,reading etc files.
 <br>
 How to use?
 <br>
-'''
+```
 git clone http://github.com/ARACADERISE/replace_shel.git
 cd replace_shell
 python file.py
-'''
+```
