@@ -24,7 +24,7 @@ class o_s:
 			self.status=check_status
 		return self.status
 	def run(self):
-		if not self.host == '' and not self.port == '':
+		if not self.host == '' and not self.port == '' and not self.file == '':
 			os.system('sh setup.sh')
 			return self.host, self.port
 			
