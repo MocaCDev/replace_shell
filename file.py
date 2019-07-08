@@ -24,6 +24,7 @@ class o_s:
 			self.status=check_status
 		return self.status
 	def run(self):
+		print('Running with host:', self.host,'\nAnd port:',self.port)
 		os.system('sh setup.sh')
 		return self.host, self.port
 			
