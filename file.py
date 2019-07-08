@@ -36,7 +36,7 @@ if host == '':
 port = input(Fore.GREEN+Style.BRIGHT+'Port >> ')
 if port == '':
 	port == '18080'
-while not port == '' and not host == '':
+while not port == '' and not host == '' or port == '18080' or host == '0.0.0.0':
 	o = o_s(host,port,file_)
 	o._check_()
 	o.run()
