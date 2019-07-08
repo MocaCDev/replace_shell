@@ -5,7 +5,7 @@
 # For Termux
 
 import os
-from colorama import Fore
+from colorama import Fore, Style
 
 
 # Defining the main file(.py)
