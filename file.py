@@ -24,19 +24,10 @@ class o_s:
 			self.status=check_status
 		return self.status
 	def run(self):
-		if not self.host == '':
-			h=self.host, True
-		else:
-			print(Fore.RED+'Error')
-		if not self.port == '':
-			p=self.port, True
-		else:
-			print(Fore.RED+'Error')
-		while h and p:
-			c=h,p
-			break
-			return c
-
+		if not self.host == '' and not self.port == '':
+			os.system('sh setup.sh')
+			return self.host, self.port
+			
 # this is where shell.sh writes into the file
 # write = os.system('sh shell.sh')
 
