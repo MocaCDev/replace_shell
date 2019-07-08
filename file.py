@@ -24,9 +24,8 @@ class o_s:
 			self.status=check_status
 		return self.status
 	def run(self):
-		if not self.host == '' and not self.port == '' and not self.file == '':
-			os.system('sh setup.sh')
-			return self.host, self.port
+		os.system('sh setup.sh')
+		return self.host, self.port
 			
 # this is where shell.sh writes into the file
 # write = os.system('sh shell.sh')
@@ -37,6 +36,8 @@ if host == '':
 port = input(Fore.GREEN+Style.BRIGHT+'Port >> ')
 if port == '':
 	port == '18080'
-o = o_s(host,port,file_)
-o._check_()
-o.run()
+while not port == '' and not host == '':
+	o = o_s(host,port,file_)
+	o._check_()
+	o.run()
+	break
