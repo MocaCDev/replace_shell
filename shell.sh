@@ -14,9 +14,7 @@ i for import..file.py==python_code_here\n!THERE IS ONLY ONE FILE THIS FILE CAN W
 
 ask()
 {
-t=$true
-while [$t]
-do
+  t=$true
   read -p "——► " shell
   if [ $shell == 'i' ]
   then
@@ -24,7 +22,6 @@ do
     read -p "import..file.py== " write
     echo "$write">>file.py
   fi
-done
 }
 show
 ask
