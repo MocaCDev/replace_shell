@@ -4,7 +4,7 @@
 # Made by ARACADERISE
 # For Termux
 
-import os
+import os, json
 from colorama import Fore, Style
 
 
@@ -16,6 +16,7 @@ class o_s:
 		self.host=host
 		self.port=port
 		self.con=False
+		self.DATA = {}
 		self.file=fi
 	def _check_(self):
 		check_status=0
@@ -26,6 +27,9 @@ class o_s:
 	def run(self):
 		print('Running with host:', self.host,'\nAnd port:',self.port)
 		os.system('sh setup.sh')
+		self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
+		with open('host_port_data.json', 'w') as h_p_d:
+			json.dump(self.DATA,h_p_d,indent=2,sort_keys=True)
 		return self.host, self.port
 			
 # this is where shell.sh writes into the file
