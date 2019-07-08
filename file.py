@@ -24,23 +24,26 @@ class o_s:
 			self.status=check_status
 		return self.status
 	def run(self):
-		with h,p,f as self.host, self.port, self.file:
-			p = True
-			h = True
-			f = True
-			while p and h:
-				self.con = True
-				with c as self.con:
-					c = p, h, f
-					return c
+		if not self.host == '':
+			h=self.host, True
+		else:
+			print(Fore.RED+'Error')
+		if not self.port == '':
+			p=self.port, True
+		else:
+			print(Fore.RED+'Error')
+		while h and p:
+			c=h,p
+			break
+			return c
 
 # this is where shell.sh writes into the file
 # write = os.system('sh shell.sh')
 
-host = input(Fore.RED+Style.BRIGHT+'Host >> ')
+host = input(Fore.GREEN+Style.BRIGHT+'Host >> ')
 if host == '':
 	host == '0.0.0.0'
-port = input(Fore.RED+Style.BRIGHT+'Port >> ')
+port = input(Fore.GREEN+Style.BRIGHT+'Port >> ')
 if port == '':
 	port == '18080'
 o = o_s(host,port,file_)
