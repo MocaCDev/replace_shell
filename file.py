@@ -33,13 +33,13 @@ write = os.system('sh shell.sh')
 # Defining the main file(.py)
 file_ = 'file.py'
 
-REQUIRE = (
+REQUIRE = {
 	"requires":"python3"	
-)
-USES = (
+}
+USES = {
 	"uses":"python3",
 	"import_extends":"os"
-)
+}
 if USES in file_:
 	o = o_s()
 	o._set_()
