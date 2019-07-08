@@ -1,6 +1,7 @@
 # Shell script replacing terminal using python
 # Use python file.py when already installed with git
 # Bash file runs in the .py file with os
+# User can insert code into file.py through bash by typing import..file.py==python_code_here
 # Made by ARACADERISE
 # For Termux
 
