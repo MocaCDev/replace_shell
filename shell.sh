@@ -2,5 +2,5 @@ read -p "»»———————► " shell
 
 if [ $shell == 'hey' ]
 then
-  echo "Hey"
+  echo -e "Hey"
 fi
