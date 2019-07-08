@@ -31,19 +31,9 @@ class o_s:
 # write = os.system('sh shell.sh')
 
 # Defining the main file(.py)
-file_ = 'file.py'
+file_ = open('file.py','r')
 
-REQUIRE = {
-	"requires":["python3"]
-}
-USES = {
-	"uses":"python3",
-	"import_extends":"os"
-}
-
-if 'python3' in USES and 'python3' in REQUIRE['requires']:
+with f as file_:
 	o = o_s()
-	o._set_()
+	o._get_()
 	o.run()
-else:
-	print('Error')
