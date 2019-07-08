@@ -2,7 +2,8 @@ clear
 
 bold_green='\033[1;32m'
 
-read -p "$bold_green ——► " shell
+echo -e "$bold_green"
+read -p "——► " shell
 
 if [ $shell == 'help' ]
 then
