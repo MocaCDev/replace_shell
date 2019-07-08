@@ -21,6 +21,7 @@ ask()
     touch file.py
     read -p "import..file.py== " write
     echo "$write">>file.py
+    ask
   fi
 }
 show
