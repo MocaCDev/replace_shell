@@ -5,14 +5,14 @@
 # Made by ARACADERISE
 # For Termux
 
-import os, json
+import os, sys, json
 from c import check
 from colorama import Fore, Style
 
 
 # Defining the main file(.py)
 file_ = open('file.py','r')
-if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name:
+if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 	class o_s:
 		def __init__(self, host, port,fi):
 			self.host=host
