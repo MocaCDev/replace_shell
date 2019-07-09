@@ -108,6 +108,7 @@ ask()
           ask
         else
           $file_ $arg
+        fi
       else
         $file $args
       fi
