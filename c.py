@@ -1,5 +1,5 @@
 import time
-from colorama import Fore
+from colorama import Fore, Style
 class check:
   def __init__(self, host,port):
     self.host=host
