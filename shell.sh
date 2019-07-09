@@ -110,7 +110,7 @@ ask()
           $file_ $arg
         fi
       else
-        $file $args
+        $file_ $args
       fi
       ask
     elif [ $ano == 'bash' ]
