@@ -11,8 +11,8 @@ class check:
       while err:
         print(Fore.RED+'Error: Host too short. at least 3 dots and 4 numbers')
         host = input(Fore.GREEN+Style.BRIGHT+'Host >> ')
-        self.host=host
-        if not len(self.host) < 7:
+        if not len(host) < 7:
+          self.host=host
           err=False
           break
     if len(self.port) < 4:
@@ -20,7 +20,7 @@ class check:
       while err:
         print(Fore.RED+'Error: Port too short. Must be 4 digits')
         port = input(Fore.GREEN+Style.BRIGHT+'Port >> ')
-        self.port = port
-        if not len(self.port) < 7:
+        if not len(port) < 7:
+          self.port=port
           err=False
           break
