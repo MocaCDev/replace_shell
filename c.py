@@ -20,7 +20,7 @@ class check:
       while err:
         print(Fore.RED+'Error: Port too short. Must be 4 digits')
         port = input(Fore.GREEN+Style.BRIGHT+'Port >> ')
-        if not len(port) < 7:
+        if not len(port) < 4:
           self.port=port
           err=False
           break
