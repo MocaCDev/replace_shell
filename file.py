@@ -62,6 +62,7 @@ if port == '':
 		else:
 			continue
 while not port == '' and not host == '':
+	os.system('clear')
 	o = o_s(host,port,file_)
 	o._check_()
 	o.run()
