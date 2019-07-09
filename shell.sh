@@ -97,12 +97,12 @@ ask()
     if [ $ano == 'none' ]
     then
       read -p "File >> " file_
-      read -p "Arguments (type n if you don't know) " args
+      read -p "Arguments (type dkn if you don't know) " args
       if [ $args == 'n']
       then
         $file_
         read -p "Argument >> " arg
-        if [ $arg == 'n' ]
+        if [ $arg == 'dkn' ]
         then
           echo "--> We'll come back to this when you know a argument"
           ask
