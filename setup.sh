@@ -1,7 +1,6 @@
 echo "Setup.sh booted"
 apt update && apt upgrade
 pkg install python file.py
-bash shell.sh
 if ! command -v python > /dev/null 2>&1; then
   echo -e "Requires Python. \n Do you want the file to download python for you?[y/n]"
   read -p ">> " u
@@ -23,3 +22,5 @@ else
     read -p ">> " c
   fi
 fi
+
+bash shell.sh
