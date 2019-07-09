@@ -14,24 +14,8 @@ if ! command -v python > /dev/null 2>&1; then
     echo "Please download python to use the project"
   fi
 else
-  echo "$cyan\nLooks like you got everything the project needs. Just type 'c' to continue"
-  read -p ">> " cho
-  if [ $cho == 'c' ]
-  then
-    echo -e "Booting..."
-  else
-    echo "$red\nError"
-    err=$true
-    while $err
-    do
-      read -p ">> " cho
-      if [ $cho == 'c' ]
-      then
-        err=$false
-      else
-        err=$true
-      fi
-    done
+  echo "$cyan\nLooks like you got everything the project needs"
+  echo "$cyan\nBooting..."
   fi
 fi
     
