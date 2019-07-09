@@ -7,7 +7,7 @@ echo -e "$bold_green"
 
 show()
 {
-echo -e "List of replace_shell commands: \nc for cd & ls\nc- as cd FILE_NAME | Also does ls\np for pkg\na for apt\npy for python\nphp\nb for bash\ng for git\nw for wget\n
+echo -e "List of replace_shell commands:\nh for help\nc for cd & ls\nc- as cd FILE_NAME | Also does ls\np for pkg\na for apt\npy for python\nphp\nb for bash\ng for git\nw for wget\n
 t-o for termux-open\ncat\np.2 for python2\ncl for clear\nr f for rm -rf File_Being_Closed\n\n$bold_blueExtra\n\n $bold_green
 i for import..file.py==python_code_here\n!THERE IS ONLY ONE FILE THIS FILE CAN WRITE TO!\ne for exit"
 }
@@ -17,7 +17,10 @@ ask()
   t=$true
   echo -e "$bold_green"
   read -p "——► " shell
-  if [ $shell == 'i' ]
+  if [ $shell == 'h' ]
+  then
+    show
+  elif [ $shell == 'i' ]
   then
     touch file.py
     read -p "import..file.py== " write
