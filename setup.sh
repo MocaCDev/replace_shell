@@ -28,7 +28,6 @@ else
       if [ $cho == 'c' ]
       then
         err=$false
-        done
       else
         err=$true
       fi
