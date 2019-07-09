@@ -31,6 +31,7 @@ else
         done
       else
         err=$true
+      fi
     done
   fi
 fi
