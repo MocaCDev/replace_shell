@@ -98,7 +98,7 @@ ask()
     then
       read -p "File >> " file_
       read -p "Arguments (type dkn if you don't know) " args
-      if [ $args == 'n']
+      if [ $args == 'n' ]
       then
         $file_
         read -p "Argument >> " arg
