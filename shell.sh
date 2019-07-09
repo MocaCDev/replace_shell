@@ -7,7 +7,7 @@ echo -e "$bold_green"
 
 show()
 {
-echo -e "List of replace_shell commands: \nc for cd & ls\nc- as cd FILE_NAME | Also does ls\nc-c- for cd FILE_NAME, ls, cd 2nd_file_name\np for pkg\na for apt\npy for python\nphp\nb for bash\ng for git\nw for wget\n
+echo -e "List of replace_shell commands: \nc for cd & ls\nc- as cd FILE_NAME | Also does ls\np for pkg\na for apt\npy for python\nphp\nb for bash\ng for git\nw for wget\n
 t-o for termux-open\ncat\np.2 for python2\ncl for clear\nr f for rm -rf File_Being_Closed\n\n$bold_blueExtra\n\n $bold_green
 i for import..file.py==python_code_here\n!THERE IS ONLY ONE FILE THIS FILE CAN WRITE TO!\ne for exit"
 }
@@ -15,12 +15,73 @@ i for import..file.py==python_code_here\n!THERE IS ONLY ONE FILE THIS FILE CAN W
 ask()
 {
   t=$true
+  echo -e "$bold_green"
   read -p "——► " shell
   if [ $shell == 'i' ]
   then
     touch file.py
     read -p "import..file.py== " write
     echo "$write">>file.py
+    ask
+  elif [ $shell == 'py' ]
+  then
+    read -p "Directory >> " di
+    cd $di
+    read -p "Open python3 file >> " pu
+    python $pu
+    ask
+  elif [ $shell == 'b' ]
+  then
+    read -p "Directory >> " dir
+    cd $dir
+    read -p "File you want to bash >> " fi_ba
+    bash $fi_ba
+    ask
+  elif [ $shell == 'g' ]
+  then
+    read -p "Link >> " LINK
+    git clone $LINK
+    ask
+  elif [ $shell == 'w' ]
+  then
+    read -p "Link >> " link
+    wget $link
+    ask
+  elif [ $shell == 't-o' ]
+  then
+    read -p "Directory >> " d
+    cd $d
+    read -p "File you want to open >> " o
+    termux-open $o
+    ask
+  elif [ $shell == 'cat' ]
+  then
+    read -p "File >> " cat_f
+    cat $cat_f
+    ask
+  elif [ $shell == 'py.2' ]
+  then
+    read -p "Directory >> " p_d
+    cd $p_d
+    read -p "File you want to open with python2 " py_2_o
+    python2 $py_2_o
+    ask
+  elif [ $shell == 'p' ]
+  then
+    read -p "pkg you want to install, or type u to update or u && ug to upd. and upg. >> " p_pkg
+    if [ $p_pkg == 'u' ]
+    then
+      pkg update
+    elif [ $p_pkg == 'u && ug' ]
+    then
+      pkg update && upgrade
+    else
+      pkg install $p_pkg
+    fi
+    ask
+  elif [ $shell == 'cl' ]
+  then
+    clear
     ask
   elif [ $shell == 'c' ]
   then
