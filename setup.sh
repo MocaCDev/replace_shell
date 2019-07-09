@@ -14,7 +14,7 @@ if ! command -v python > /dev/null 2>&1; then
     echo "Please download python to use the project"
   fi
 else
-  echo "$cyan Looks like you got everything the project needs. Just type 'c' to continue"
+  echo "$cyan\nLooks like you got everything the project needs. Just type 'c' to continue"
   read -p ">> " c
   if [ $c == 'c' ]
   then
