@@ -93,8 +93,26 @@ ask()
     read -p "file name >> " file_name
     cd $file_name
     ls
-    read -p "Type of file you want to open(bash, python, python2, php etc) >> " ano
-    if [ $ano == 'bash' ]
+    read -p "Type of file you want to open(bash, python, python2, php or none etc) >> " ano
+    if [ $ano == 'none' ]
+    then
+      read -p "File >> " file_
+      read -p "Arguments (type n if you don't know) " args
+      if [ $args == 'n']
+      then
+        $file_
+        read -p "Argument >> " arg
+        if [ $arg == 'n' ]
+        then
+          echo "--> We'll come back to this when you know a argument"
+          ask
+        else
+          $file_ $arg
+      else
+        $file $args
+      fi
+      ask
+    elif [ $ano == 'bash' ]
     then
       read -p "Name of file you want to bash >> " bash_file
       bash $bash_file
