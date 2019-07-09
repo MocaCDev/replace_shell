@@ -27,8 +27,8 @@ class o_s:
 			self.status=check_status
 		return self.status
 	def run(self):
-		check = check(self.host, self.port)
-		check.check()
+		_check_ = check(self.host, self.port)
+		_check_.check()
 		print('Running with host:', self.host,'\nAnd port:',self.port)
 		os.system('sh setup.sh')
 		self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
