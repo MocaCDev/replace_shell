@@ -21,7 +21,17 @@ else
     echo -e "Booting..."
   else
     echo "$red\nError"
-    read -p ">> " c
+    err=$true
+    while $err
+    do
+      read -p ">> " cho
+      if [ $cho == 'c' ]
+      then
+        err=$false
+        done
+      else
+        err=$true
+    done
   fi
 fi
     
