@@ -16,7 +16,6 @@ if ! command -v python > /dev/null 2>&1; then
 else
   echo "$cyan\nLooks like you got everything the project needs"
   echo "$cyan\nBooting..."
-  fi
 fi
     
 
