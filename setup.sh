@@ -15,12 +15,12 @@ if ! command -v python > /dev/null 2>&1; then
   fi
 else
   echo "$cyan\nLooks like you got everything the project needs. Just type 'c' to continue"
-  read -p ">> " c
-  if [ $c == 'c' ]
+  read -p ">> " c_
+  if [ $c_ == 'c' ]
   then
     echo -e "Booting..."
   else
-    echo "$red Error"
+    echo "$red\nError"
     read -p ">> " c
   fi
 fi
