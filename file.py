@@ -11,18 +11,31 @@ from c import check
 from colorama import Fore, Style
 
 def _use_mode(syst,sys):
-	class wide_mode:
-		def __init__(self,plat,sys):
-			self.wide=''
-			self.plat=plat,sys
-		def _w_(self):
-			with self.plat as syst:
-				self.wide=syst
-				while True:
-					print(self.wide)
-					return self.wide
-	m=wide_mode(syst,sys)
-	m._w_()
+	def _write_(t_1,t_2):
+		write = open('device_data.json','w')
+		written={'Name':[t_1,t_2]}
+		write.write(written)
+		write.close()
+	if syst and sys == 'linux':
+		print('Boot in Linux')
+		def linux():
+			return _write_(syst, sys)
+		linux()
+	if syst and sys == 'posix':
+		print('Boot in posix/Chrome os')
+		def posix():
+			return _write_(syst, sys)
+		posix()
+	if syst and sys == 'ubuntu':
+		print('Boot in ubuntu')
+		def ubuntu():
+			return _write_(syst, sys)
+		ubuntu()
+	if syst and sys == 'debian':
+		print('Boot in debian')
+		def debian():
+			return _write_(syst, sys)
+		debian()
 
 # Defining the main file(.py)
 file_ = open('file.py','r')
