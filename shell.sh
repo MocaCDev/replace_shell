@@ -72,11 +72,11 @@ ask()
     ask
   elif [ $shell == 'p' ]
   then
-    read -p "pkg you want to install, or type u to update or u && ug to upd. and upg. >> " p_pkg
+    read -p "pkg you want to install, or type u to update or u&&ug to upd. and upg. >> " p_pkg
     if [ $p_pkg == 'u' ]
     then
       pkg update
-    elif [ $p_pkg == 'u && ug' ]
+    elif [ $p_pkg == 'u&&ug' ]
     then
       pkg update && upgrade
     else
