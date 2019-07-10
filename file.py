@@ -15,7 +15,7 @@ from colorama import Fore, Style
 file_ = open('file.py','r')
 
 if not 'ubuntu-in-termux' in os.system('cd replace_shell'):
-	os.system('git clone https://github.com/MFDGaming/ubuntu-in-termux.git')  waaa
+	os.system('git clone https://github.com/MFDGaming/ubuntu-in-termux.git')
 
 if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 	class o_s:
