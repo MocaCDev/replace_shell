@@ -37,6 +37,7 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 				
 				# Where the git command are imported into cd downloads
 				os.system(['cd downloads',f'{import_to_downloads}'])
+				
 				os.system('sh setup.sh')
 				self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
 				with open('host_port_data.json', 'w') as h_p_d:
