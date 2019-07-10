@@ -6,16 +6,9 @@
 # Made by ARACADERISE
 # For Termux
 
-from setuptools import setup
 import os, sys, json
 from c import check
 from colorama import Fore, Style
-
-setup(
-	name='replace_shell',
-	version='1.0.1',
-	scripts=['file.py']
-)
 
 # Defining the main file(.py)
 file_ = open('file.py','r')
