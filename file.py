@@ -12,8 +12,8 @@ from colorama import Fore, Style
 
 def _use_mode(syst,sys):
 	class wide_mode:
-		def __init__(self,wide,plat,sys):
-			self.wide=wide
+		def __init__(self,plat,sys):
+			self.wide=''
 			self.plat=plat,sys
 		def _w_(self):
 			with self.plat as syst:
