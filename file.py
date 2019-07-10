@@ -25,22 +25,26 @@ def _use_mode(syst,sys):
 		return "Done"
 	
 	if syst and sys == 'linux':
-		print('Boot in Linux')
+		print('System boot in:',sys)
+		print('OS boot in:',syst)
 		def linux():
 			return _write_(syst, sys)
 		linux()
 	if syst and sys == 'posix':
-		print('Boot in posix/Chrome os')
+		print('System boot in:',sys)
+		print('OS boot in:',syst)
 		def posix():
 			return _write_(syst, sys)
 		posix()
 	if syst and sys == 'ubuntu':
-		print('Boot in ubuntu')
+		print('System boot in:',sys)
+		print('OS boot in:',syst)
 		def ubuntu():
 			return _write_(syst, sys)
 		ubuntu()
 	if syst and sys == 'debian':
-		print('Boot in debian')
+		print('System boot in:',sys)
+		print('OS boot in:',syst)
 		def debian():
 			return _write_(syst, sys)
 		debian()
@@ -48,7 +52,7 @@ def _use_mode(syst,sys):
 # Defining the main file(.py)
 file_ = open('file.py','r')
 
-if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
+if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name:
 	
 	_use_mode(os.name,sys.platform)
 	
