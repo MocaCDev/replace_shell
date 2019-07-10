@@ -10,12 +10,12 @@ import os, sys, json
 from c import check
 from colorama import Fore, Style
 
-main='cd replace_shell'
+main=os.system('cd replace_shell')
 
 # Defining the main file(.py)
 file_ = open('file.py','r')
 
-if not 'ubuntu-in-termux' in os.system(main):
+if 'ubuntu-in-termux' not in main:
 	os.system('git clone https://github.com/MFDGaming/ubuntu-in-termux.git')
 
 if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
