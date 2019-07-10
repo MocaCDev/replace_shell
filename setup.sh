@@ -6,8 +6,6 @@ red='\033[1;31m'
 # NOT ROOT ACCESSED
 # BUT RAN FOR ROOT
 
-cd downloads
-
 echo "Setup.sh booted"
 apt update && apt upgrade
 pkg install python file.py
