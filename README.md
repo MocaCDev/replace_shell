@@ -9,7 +9,7 @@ the terminal, and opening,downloading,reading etc files.
 <br>
 How to use?
 <br>
-#IF you already have python3 installed#
+# IF you already have python3 installed #
 
 ### ###
 
@@ -18,7 +18,7 @@ git clone http://github.com/ARACADERISE/replace_shel.git
 cd replace_shell
 python file.py
 ```
-#If you don't. No worries. Just run the following:#
+# If you don't. No worries. Just run the following: #
 
 ### ###
 
