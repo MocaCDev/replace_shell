@@ -10,15 +10,13 @@ import os, sys, json
 from c import check
 from colorama import Fore, Style
 
-main=os.system('cd replace_shell')
-
 # Defining the main file(.py)
 file_ = open('file.py','r')
 
-if 'ubuntu-in-termux' not in main:
-	os.system('git clone https://github.com/MFDGaming/ubuntu-in-termux.git')
-
 if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
+	# Downloading ubuntu-in-termux
+	os.system('git clone https://github.com/MFDGaming/ubuntu-in-termux.git')
+	
 	class o_s:
 		def __init__(self, host, port,fi):
 			self.host=host
