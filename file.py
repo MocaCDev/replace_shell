@@ -16,6 +16,7 @@ file_ = open('file.py','r')
 
 # Importing the git command to downloads
 import_to_downloads = 'git clone https://github.com/ARACADERISE/replace_shell'
+os.system('cd /')
 os.system('cd downloads')
 os.system(f'{import_to_downloads}')
 
