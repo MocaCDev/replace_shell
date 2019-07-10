@@ -14,7 +14,7 @@ from colorama import Fore, Style
 setup(
 	name='replace_shell',
 	version='1.0.1',
-	script=['file.py']
+	scripts=['file.py']
 )
 
 # Defining the main file(.py)
