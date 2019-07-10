@@ -52,7 +52,7 @@ def _use_mode(syst,sys):
 # Defining the main file(.py)
 file_ = open('file.py','r')
 
-if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name:
+if 'ubuntu' in os.name:
 	
 	_use_mode(os.name,sys.platform)
 	
