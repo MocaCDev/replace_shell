@@ -114,4 +114,4 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 		o.run()
 		break
 else:
-	print('Not available for your system')
+	raise Exception("Device not compatible")
