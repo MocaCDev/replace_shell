@@ -30,7 +30,7 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 			_check_ = check(self.host, self.port)
 			_check_.check()
 			print('Running with host:', self.host,'\nAnd port:',self.port)
-			while os.system('cd downloads'):
+			while not os.name == False:
 				os.system('sh setup.sh')
 				self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
 				with open('host_port_data.json', 'w') as h_p_d:
