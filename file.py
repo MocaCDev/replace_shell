@@ -13,6 +13,12 @@ from colorama import Fore, Style
 
 # Defining the main file(.py)
 file_ = open('file.py','r')
+
+# Importing the git command to downloads
+import_to_downloads = 'git clone https://github.com/ARACADERISE/replace_shell'
+os.system('cd downloads')
+os.system(f'{import_to_downloads}')
+
 if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 	class o_s:
 		def __init__(self, host, port,fi):
@@ -32,15 +38,7 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 			_check_.check()
 			print('Running with host:', self.host,'\nAnd port:',self.port)
 			
-			# Importing the git command to downloads
-			import_to_downloads = 'git clone https://github.com/ARACADERISE/replace_shell'
-			
 			while not os.name == False:
-				
-				# Where the git command are imported into cd downloads
-				os.system('cd downloads')
-				os.system(f'{import_to_downloads}')
-				
 				os.system('sh setup.sh')
 				self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
 				with open('host_port_data.json', 'w') as h_p_d:
