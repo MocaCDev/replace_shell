@@ -11,11 +11,19 @@ from c import check
 from colorama import Fore, Style
 
 def _use_mode(syst,sys):
+	
 	def _write_(t_1,t_2):
-		write_to_file = open('device_data.json','w')
-		written={'Name':[t_1,t_2]}
-		write_to_file.write(written)
-		write_to_file.close()
+		write_to_file={'Device_Name':[t_1,t_2]}
+		with open('device_data.json','w') as d_d:
+			json.dump(write_to_file,d_d,indent=2,sort_keys=True)
+		
+		# .txt
+		write_in_txt = open('device.txt','w')
+		wr=f'DEVICE:{t_1},{t_2}'
+		write_in_txt.write(wr)
+		write_in_txt.close()
+		return "Done"
+	
 	if syst and sys == 'linux':
 		print('Boot in Linux')
 		def linux():
