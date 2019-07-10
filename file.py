@@ -12,10 +12,10 @@ from colorama import Fore, Style
 
 def _use_mode(syst,sys):
 	def _write_(t_1,t_2):
-		write = open('device_data.json','w')
+		write_to_file = open('device_data.json','w')
 		written={'Name':[t_1,t_2]}
-		write.write(written)
-		write.close()
+		write_to_file.write(written)
+		write_to_file.close()
 	if syst and sys == 'linux':
 		print('Boot in Linux')
 		def linux():
