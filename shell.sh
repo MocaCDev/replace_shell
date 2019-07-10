@@ -20,6 +20,7 @@ ask()
   if [ $shell == 'h' ]
   then
     show
+    ask
   elif [ $shell == 'i' ]
   then
     touch file.py
