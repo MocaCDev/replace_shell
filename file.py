@@ -10,12 +10,26 @@ import os, sys, json
 from c import check
 from colorama import Fore, Style
 
+def _use_mode(syst,sys):
+	class wide_mode:
+		def __init__(self,wide,plat,sys):
+			self.wide=wide
+			self.plat=plat,sys
+		def _w_(self):
+			with self.plat as syst:
+				self.wide=syst
+				while True:
+					print(self.wide)
+					return self.wide
+	m=wide_mode(syst,sys)
+	m._w_()
+
 # Defining the main file(.py)
 file_ = open('file.py','r')
 
 if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
-	# Downloading ubuntu-in-termux
-	os.system('git clone https://github.com/MFDGaming/ubuntu-in-termux.git')
+	
+	_use_mode(os.name,sys.platform)
 	
 	class o_s:
 		def __init__(self, host, port,fi):
