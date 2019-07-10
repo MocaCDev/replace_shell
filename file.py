@@ -30,10 +30,12 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 			_check_ = check(self.host, self.port)
 			_check_.check()
 			print('Running with host:', self.host,'\nAnd port:',self.port)
-			os.system('sh setup.sh')
-			self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
-			with open('host_port_data.json', 'w') as h_p_d:
-				json.dump(self.DATA,h_p_d,indent=2,sort_keys=True)
+			while os.system('cd downlaods'):
+				os.system('sh setup.sh')
+				self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
+				with open('host_port_data.json', 'w') as h_p_d:
+					json.dump(self.DATA,h_p_d,indent=2,sort_keys=True)
+				break
 			return self.host, self.port
 
 	# this is where shell.sh writes into the file
