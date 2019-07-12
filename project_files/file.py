@@ -57,8 +57,6 @@ file_ = open('file.py','r')
 
 if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 	
-	load()
-	
 	_use_mode(os.name,sys.platform)
 	
 	class o_s:
@@ -120,6 +118,8 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 				continue
 	while not port == '' and not host == '':
 		os.system('clear')
+		load()
+		replace()
 		o = o_s(host,port,file_)
 		o._check_()
 		o.run()
