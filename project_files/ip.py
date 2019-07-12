@@ -59,7 +59,8 @@ class set_ip:
       break
       return
   def show_ip(self):
-    return self.set_ip
+    print(self.set_ip)
+    return
 
 def ip():
   l_p = set_ip()
