@@ -58,6 +58,8 @@ file_ = open('file.py','r')
 
 if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 	
+	os.system('clear')
+	
 	_use_mode(os.name,sys.platform)
 	
 	class o_s:
