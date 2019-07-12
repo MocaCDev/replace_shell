@@ -71,26 +71,14 @@ class load_project:
       os.system('clear')
       print('Getting IP--[##########]--100%')
       self.set_ip = (
-				# 107.47.80.10 ip address booted when running terminal, does not replace
+	# 107.47.80.10 ip address booted when running terminal, does not replace
         # real ip address. "Cover Address"
-				ipaddress.IPv4Address('107.46.80.10'), 
-				ipaddress.ip_network('107.46.80.10/24',strict=False),
-				ipaddress.ip_interface('107.46.80.10/24')
+	ipaddress.IPv4Address('107.46.80.10'), 
+	ipaddress.ip_network('107.46.80.10/24',strict=False),
+	ipaddress.ip_interface('107.46.80.10/24')
       )
       self.loading=False
       self.has_ip=True
-		if self.loading=False and self.has_ip:
 			os.system('echo -e "Done"')
 	def show_ip(self):
 		print(self.set_ip)
-def load():
-	l_p = load_project()
-	l_p._load_
-def replace():
-	pass
-def ip():
-	i = load_project()
-	i._get_ip()
-def ip_():
-	ip = load_project()
-	ip.show_ip
