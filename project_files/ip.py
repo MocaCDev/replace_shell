@@ -41,6 +41,7 @@ class set_ip:
       time.sleep(1)
       os.system('clear')
       print('\n\nGetting IP--[##############]--100%\n\n')
+      os.system('clear')
       self.set_ip = (
         ipaddress.ip_address(u'147.80.46.18'),
         ipaddress.ip_network(u'147.80.46.18/24',strict=False)
