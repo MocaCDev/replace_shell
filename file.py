@@ -68,7 +68,7 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 		def _check_(self):
 			check_status=0
 			if not self.con == True:
-				self.set_ip = ipaddress.ip_address('107.47.80.10'), ipaddress.ip_network('107.47.80.10/24')
+				self.set_ip = ipaddress.ip_address('107.47.80.10'), ipaddress.ip_network('107.47.80.10/24'),ipaddress.ip_interface('107.47.80.10/24')
 				self.status=check_status
 			return self.status
 		def run(self):
