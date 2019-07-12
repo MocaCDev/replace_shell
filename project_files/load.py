@@ -89,7 +89,7 @@ def load():
   l_p = load_project()
   l_p._load_()
 def replace():
-  return
+  print('')
 def ip():
 	i = load_project()
 	i._get_ip()
