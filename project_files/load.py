@@ -45,3 +45,4 @@ class load_project:
 			print(Fore.GREEN+Style.BRIGHT+'\n\nGetting IP--[##########]--100%')
 			self.has_ip=True
 			self.loading=False
+      return
