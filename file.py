@@ -9,7 +9,7 @@
 import os, sys, json
 from c import check
 from colorama import Fore, Style
-import ipadress
+import ipaddress
 from myErrors import _err_
 
 def _use_mode(syst,sys):
