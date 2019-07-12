@@ -84,16 +84,13 @@ class load_project:
 			return "Done"
   def show_ip(self):
     return self.set_ip
-      
+     
 def load():
   l_p = load_project()
   l_p._load_()
-def replace():
-  print('')
-def ip():
-	i = load_project()
-	i._get_ip()
-	return
+	l_p._get_ip()
 def ip_():
 	ip = load_project()
 	ip.show_ip()
+def replace():
+  print('')
