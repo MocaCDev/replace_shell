@@ -7,6 +7,7 @@
 # For Termux
 
 import os, sys, json
+from load import *
 from c import check
 from colorama import Fore, Style
 import ipaddress
@@ -55,6 +56,8 @@ def _use_mode(syst,sys):
 file_ = open('file.py','r')
 
 if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
+	
+	load()
 	
 	_use_mode(os.name,sys.platform)
 	
