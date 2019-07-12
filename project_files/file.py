@@ -8,6 +8,7 @@
 
 import os, sys, json
 from load import *
+from ip import *
 from c import check
 from colorama import Fore, Style
 import ipaddress
