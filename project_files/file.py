@@ -78,7 +78,7 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 		def run(self):
 			_check_ = check(self.host, self.port)
 			_check_.check()
-			print('Running with host:', self.host,'\nAnd port:',self.port,'\nSet Ip:',ip_())
+			print('Running with host:', self.host,'\nAnd port:',self.port)
 			
 			while not os.name == False:
 				os.system('sh setup.sh')
