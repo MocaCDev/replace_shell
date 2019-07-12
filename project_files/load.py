@@ -36,4 +36,4 @@ class load_project:
       time.sleep(0.2)
       os.system('clear')
       print('\n\nSetting Up--[######################]-- 100%\n\n')
-	self.loading=False
+      self.loading=False
