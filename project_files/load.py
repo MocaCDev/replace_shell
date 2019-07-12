@@ -37,12 +37,4 @@ class load_project:
       os.system('clear')
       print('\n\nSetting Up--[######################]-- 100%\n\n')
       self.setup_done=True
-			time.sleep(0.5)
-			os.system('clear')
-			print(Fore.GREEN+Style.BRIGHT+'\n\nGetting IP--[..........]--')
-			time.sleep(1)
-			os.system('clear')
-			print(Fore.GREEN+Style.BRIGHT+'\n\nGetting IP--[##########]--100%')
-			self.has_ip=True
 			self.loading=False
-      return
