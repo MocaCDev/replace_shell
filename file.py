@@ -68,13 +68,19 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 		def _check_(self):
 			check_status=0
 			if not self.con == True:
-				self.set_ip = ipaddress.IPv4Address('107.47.80.10'), ipaddress.ip_network('107.47.80.10/24',strict=False),ipaddress.ip_interface('107.47.80.10/24')
+				self.set_ip = (
+					# 107.47.80.10 ip address booted when running terminal, does not replace
+					# real ip address. "Cover Address"
+					ipaddress.IPv4Address('107.47.80.10'), 
+					ipaddress.ip_network('107.47.80.10/24',strict=False),
+					ipaddress.ip_interface('107.47.80.10/24')
+				)
 				self.status=check_status
 			return self.status
 		def run(self):
 			_check_ = check(self.host, self.port)
 			_check_.check()
-			print('Running with host:', self.host,'\nAnd port:',self.port,'\nSet Ip:',self.set_ip)
+			print('Running with host:', self.host,'\nAnd port:',self.port,'\nSet Ip:',str(self.set_ip))
 			
 			while not os.name == False:
 				os.system('sh setup.sh')
