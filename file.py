@@ -9,7 +9,7 @@
 import os, sys, json
 from c import check
 from colorama import Fore, Style
-from myErrors import *
+from myErrors import _err_
 
 def _use_mode(syst,sys):
 	
@@ -115,4 +115,4 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 		o.run()
 		break
 else:
-	raise ExceptionError()
+	raise _err_(1,'Not available for your system')
