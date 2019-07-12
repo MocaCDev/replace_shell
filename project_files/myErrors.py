@@ -24,6 +24,9 @@ class Errors:
   def FutureWarningError(self):
     raise FutureWarning(self.msg)
     return self.msg
+  def KeyboardInterruptError(self):
+    raise KeyboardInterrupt(self.msg)
+    return self.msg
 
 def _err_(type_,msg):
 
@@ -47,6 +50,9 @@ def _err_(type_,msg):
 
   # Type 7 error msg
   t_7 = Errors(msg)
+  
+  # Type 8 error msg
+  t_8 = Errors(msg)
 
   if type_ == 1:
     t_1.ExceptionError()
@@ -69,5 +75,8 @@ def _err_(type_,msg):
   if type_ == 7:
     t_7.FutureWarningError()
     return "Error type: FutureWarning"
+  if type_ == 8:
+    t_8.KeyboardInterruptError()
+    return "Error type: KeyboardInterrupt"
   else:
     raise Exception("That error was not located. Sorry")
