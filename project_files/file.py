@@ -112,9 +112,9 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 			else:
 				continue
 	while not port == '' and not host == '':
-		os.system('clear')
 		replace()
 		load()
+		os.system('clear')
 		o = o_s(host,port,file_)
 		o._check_()
 		o.run()
