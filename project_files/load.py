@@ -79,17 +79,3 @@ class load_project:
       )
       self.loading=False
       self.has_ip=True
-    	if self.loading == False and self.has_ip == True:
-				os.system('echo -e "Done"')
-  def show_ip(self):
-    print(self.set_ip)
-     
-def load():
-  l_p = load_project()
-  l_p._load_()
-	l_p._get_ip()
-def ip_():
-	ip = load_project()
-	ip.show_ip()
-def replace():
-  print('')
