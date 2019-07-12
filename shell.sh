@@ -136,7 +136,7 @@ ask()
       read -p "Name of file you want to open with php >> " php_file
       php $php_file
     else
-      echo "That type of root-directory has either not been installed or was not hard coded into the shell.sh file\nTry again."
+      echo "That type of root-directory has either not been installed or was not hard coded into the shell.sh file. Try again."
       ask
     fi
     ask
