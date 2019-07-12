@@ -9,6 +9,7 @@
 import os, sys, json
 from c import check
 from colorama import Fore, Style
+from myErrors import *
 
 def _use_mode(syst,sys):
 	
@@ -114,4 +115,4 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 		o.run()
 		break
 else:
-	raise Exception("Device not compatible")
+	raise ExceptionError()
