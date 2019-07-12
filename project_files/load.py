@@ -4,8 +4,9 @@ from colorama import Fore, Style
 class load_project:
   def __init__(self):
     self.loading=True
+    self.is_loaded=False
   def _load_(self):
-    while self.loading:
+    while self.loading and not self.is_loaded:
       print(Fore.GREEN+Style.BRIGHT+'\n\nSetting Up--[......................]--\n\n')
       time.sleep(0.2)
       os.system('clear')
