@@ -3,7 +3,6 @@ import os,time
 class load_project:
   def __init__(self):
     self.loading=True
-    return self.loading
   def _load_(self):
     while self.loading:
       print('DONWLOADING--[......................]--')
@@ -34,6 +33,8 @@ class load_project:
       time.sleep(0.2)
       os.system('clear')
       print('DONWLOADING--[######################]-- 100%')
+      self.loading=False
+      
 def load():
   l_p = load_project()
   l_p._load_()
