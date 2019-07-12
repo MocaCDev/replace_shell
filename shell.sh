@@ -151,3 +151,5 @@ ask()
 }
 show
 ask
+
+exit
