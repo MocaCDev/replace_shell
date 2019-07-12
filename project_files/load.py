@@ -80,8 +80,8 @@ class load_project:
       self.loading=False
       self.has_ip=True
     if self.loading == False and self.has_ip == True:
-			os.system('echo -e "Done"')
-			return "Done"
+	os.system('echo -e "Done"')
+	return "Done"
   def show_ip(self):
     return self.set_ip
       
