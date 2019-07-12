@@ -23,5 +23,5 @@ else
   echo "$cyan\nBooting..."
 fi
     
-
+pip install -r requirements.txt
 bash shell.sh
