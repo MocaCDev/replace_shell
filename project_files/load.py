@@ -34,3 +34,8 @@ class load_project:
       time.sleep(0.2)
       os.system('clear')
       print('DONWLOADING--[######################]-- 100%')
+def load():
+  l_p = load_project()
+  l_p._load_()
+def replace():
+  return
