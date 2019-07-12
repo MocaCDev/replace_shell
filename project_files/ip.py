@@ -6,7 +6,7 @@ class set_ip:
   def __init__(self):
     self.loading=True
     self.has_ip=False
-    self.set_ip=(None)
+    self.set_ip=None
   def _get_ip(self):
     while self.loading and not self.has_ip:
       os.system('clear')
@@ -49,6 +49,7 @@ class set_ip:
       self.has_ip=True
       if not self.loading and self.has_ip:
         os.system('echo -e "SetupBoot Done!"')
+      break
       return
   def show_ip(self):
     return self.set_ip
@@ -58,11 +59,14 @@ def ip():
   l_p._get_ip()
   return
 def replace():
-  if 'debian' in sys.platform:
-    pass
-  else:
-    ip()
-    return
+  print(Fore.BLUE+"""
+                _                        _          _ _ 
+ _ __ ___ _ __ | | __ _  ___ ___     ___| |__   ___| | |
+| '__/ _ \ '_ \| |/ _` |/ __/ _ \   / __| '_ \ / _ \ | |
+| | |  __/ |_) | | (_| | (_|  __/   \__ \ | | |  __/ | |
+|_|  \___| .__/|_|\__,_|\___\___|___|___/_| |_|\___|_|_|
+         |_|                   |_____|   
+  """)
 def ip_():
   ip = set_ip()
   ip.show_ip()
