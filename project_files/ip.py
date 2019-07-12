@@ -57,7 +57,7 @@ class set_ip:
       if not self.loading and self.has_ip:
         os.system('echo -e "SetupBoot Done!"')
         print('\n')
-        os.system(f'echo -e "--[ IP --> {str(self.set_ip)} ]"')
+        #os.system(f'echo -e "--[ IP --> {str(self.set_ip)} ]"')
         time.sleep(0.6)
       break
       return
