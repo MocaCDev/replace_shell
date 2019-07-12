@@ -37,3 +37,7 @@ class load_project:
       os.system('clear')
       print('\n\nSetting Up--[######################]-- 100%\n\n')
       self.loading=False
+def load():
+  l = load_project()
+  l._load_()
+  return
