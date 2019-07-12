@@ -56,11 +56,11 @@ class set_ip:
       self.has_ip=True
       if not self.loading and self.has_ip:
         os.system('echo -e "SetupBoot Done!"')
+        print('\n')
+        os.system('echo -e "--{ IP --> '+self.set_ip+' }"')
+        time.sleep(0.6)
       break
       return
-  def show_ip(self):
-    print(self.set_ip)
-    return
 
 def ip():
   l_p = set_ip()
@@ -113,7 +113,3 @@ def replace():
   print(Fore.BLUE+'     --{Version 1.0.1}--            ')
   print(Fore.RED+'\n\nLoading...\n\n')
   time.sleep(8)
-def ip_():
-  ip = set_ip()
-  ip.show_ip()
-  return
