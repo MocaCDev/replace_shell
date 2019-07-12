@@ -1,4 +1,4 @@
-import os,time
+import os,time,sys
 import ipaddress
 from colorama import Fore, Style
 # Sets up ip
@@ -55,6 +55,12 @@ def ip():
   l_p = set_ip()
   l_p._get_ip()
   return
+def replace():
+  if 'debian' in sys.platform:
+    pass
+  else:
+    ip()
+    return
 def ip_():
   ip = set_ip()
   ip.show_ip()
