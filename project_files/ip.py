@@ -8,6 +8,7 @@ class set_ip:
     self.has_ip=False
   def _get_ip(self):
     while self.loading and not self.has_ip:
+      os.system('clear')
       print('\n\nGetting IP--[.............]--\n\n')
       time.sleep(1)
       os.system('clear')
