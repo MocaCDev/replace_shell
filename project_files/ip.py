@@ -1,4 +1,5 @@
 import os,time
+import ipaddress
 from colorama import Fore, Style
 # Sets up ip
 class set_ip:
@@ -38,6 +39,23 @@ class set_ip:
       time.sleep(1)
       os.system('clear')
       print('\n\nGetting IP--[##########]--100%\n\n')
+      self.set_ip = (
+        ipaddress.ip_address(u'147.80.46.18'),
+        ipaddress.ip_network(u'147.80.46.18/24')
+      )
       self.loading=False
       self.has_ip=True
-      
+      if not self.loading and self.has_ip:
+        os.system('echo -e "SetupBoot Done!"')
+      return
+    def show_ip(self):
+      return self.set_ip
+
+def ip():
+  l_p = set_ip()
+  l_p._get_ip()
+  return
+def ip_():
+  ip = set_ip()
+  ip.show_ip()
+  return
