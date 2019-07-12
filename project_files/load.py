@@ -91,4 +91,3 @@ def ip():
   i._get_ip()
   i.show_ip()
   return
-
