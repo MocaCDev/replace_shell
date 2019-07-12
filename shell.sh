@@ -94,6 +94,8 @@ ask()
     ask
   elif [ $shell == 'c-' ]
   then
+    cd
+    ls
     read -p "file name >> " file_name
     cd $file_name
     ls
