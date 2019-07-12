@@ -9,6 +9,7 @@
 import os, sys, json
 from c import check
 from colorama import Fore, Style
+import ipadress
 from myErrors import _err_
 
 def _use_mode(syst,sys):
@@ -67,13 +68,13 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 		def _check_(self):
 			check_status=0
 			if not self.con == True:
-				self.con=False
+				self.set_ip = ipaddress.ip_address('107.47.80.10')
 				self.status=check_status
 			return self.status
 		def run(self):
 			_check_ = check(self.host, self.port)
 			_check_.check()
-			print('Running with host:', self.host,'\nAnd port:',self.port)
+			print('Running with host:', self.host,'\nAnd port:',self.port,'\nSet Ip:',self.set_ip)
 			
 			while not os.name == False:
 				os.system('sh setup.sh')
