@@ -69,12 +69,13 @@ if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
 		def _check_(self):
 			check_status=0
 			if not self.con == True:
+				ip()
 				self.status=check_status
 			return self.status
 		def run(self):
 			_check_ = check(self.host, self.port)
 			_check_.check()
-			print('Running with host:', self.host,'\nAnd port:',self.port,'\nSet Ip:',ip())
+			print('Running with host:', self.host,'\nAnd port:',self.port,'\nSet Ip:',ip_())
 			
 			while not os.name == False:
 				os.system('sh setup.sh')
