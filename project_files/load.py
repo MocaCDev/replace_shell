@@ -37,7 +37,6 @@ class load_project:
       os.system('clear')
       print('\n\nSetting Up--[######################]-- 100%\n\n')
       self.setup_done=True
-    return
   def _get_ip(self):
 		while self.loading and not self.has_ip:
 	    print(Fore.GREEN+Style.BRIGHT+'Getting IP--[..........]--')
