@@ -6,6 +6,7 @@ class set_ip:
   def __init__(self):
     self.loading=True
     self.has_ip=False
+    self.set_ip=(None)
   def _get_ip(self):
     while self.loading and not self.has_ip:
       os.system('clear')
