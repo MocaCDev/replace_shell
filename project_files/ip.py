@@ -97,8 +97,9 @@ def replace():
 {Fore.GREEN}|_|  \___| .__/|_|\__,_|\___\___|___|___/_| |_|\___|_|_|
          |_|                   |_____|   
   """)
-  print('     --{Made By: ARACADERISE}--     ')
-  print('     --{Version 1.0.1}--            ')
+  print(Fore.BLUE+'     --{Made By: ARACADERISE}--     ')
+  print(Fore.BLUE+'     --{Version 1.0.1}--            ')
+  print(Fore.RED+'\n\nLoading...\n\n')
   time.sleep(8)
 def ip_():
   ip = set_ip()
