@@ -11,8 +11,6 @@ How to use?
 <br>
 # IF you already have python3 installed #
 
-## Make sure you have colorama installed, if you don't then ``` bash setup.py``` ##
-
 ### ###
 
 ```
