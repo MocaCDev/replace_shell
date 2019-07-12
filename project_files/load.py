@@ -4,9 +4,10 @@ from colorama import Fore, Style
 class load_project:
   def __init__(self):
     self.loading=True
-    self.is_loaded=False
+    self.setup_done=False
+    self.has_ip = False
   def _load_(self):
-    while self.loading and not self.is_loaded:
+    while self.loading and not self.setup_done:
       print(Fore.GREEN+Style.BRIGHT+'\n\nSetting Up--[......................]--\n\n')
       time.sleep(0.2)
       os.system('clear')
@@ -35,50 +36,53 @@ class load_project:
       time.sleep(0.2)
       os.system('clear')
       print('\n\nSetting Up--[######################]-- 100%\n\n')
+      self.setup_done=True
     return
   def _get_ip(self):
-     print(Fore.GREEN+Style.BRIGHT+'Getting IP--[..........]--')
-     time.sleep(1)
-     os.system('clear')
-     print('Getting IP--[#.........]--10%')
-     time.sleep(0.4)
-     os.system('clear')
-     print('Getting IP--[##........]--20%')
-     time.sleep(0.6)
-     os.system('clear')
-     print('Getting IP--[###.......]--30%')
-     time.sleep(0.2)
-     os.system('clear')
-     print('Getting IP--[####......]--40%')
-     time.sleep(0.8)
-     os.system('clear')
-     print('Getting IP--[#####.....]--50%')
-     time.sleep(0.7)
-     os.system('clear')
-     print('Getting IP--[######....]--60%')
-     time.sleep(1)
-     os.system('clear')
-     print('Getting IP--[#######...]--70%')
-     time.sleep(0.1)
-     os.system('clear')
-     print('Getting IP--[########..]--80%')
-     time.sleep(0.9)
-     os.system('clear')
-     print('Getting IP--[#########.]--90%')
-     time.sleep(0.7)
-     os.system('clear')
-     print('Getting IP--[##########]--100%')
-     self.set_ip = (
-	     # 107.47.80.10 ip address booted when running terminal, does not replace
-	     # real ip address. "Cover Address"
-	     ipaddress.IPv4Address('107.47.80.10'), 
-	     ipaddress.ip_network('107.47.80.10/24',strict=False),
-	     ipaddress.ip_interface('107.47.80.10/24')
-     )
-     self.loading=False
-     if self.loading == False:
-       os.system('echo -e "Done"')
-       return "Done"
+		while self.loading and not self.has_ip:
+	    print(Fore.GREEN+Style.BRIGHT+'Getting IP--[..........]--')
+	    time.sleep(1)
+	    os.system('clear')
+	    print('Getting IP--[#.........]--10%')
+	    time.sleep(0.4)
+	    os.system('clear')
+	    print('Getting IP--[##........]--20%')
+	    time.sleep(0.6)
+	    os.system('clear')
+	    print('Getting IP--[###.......]--30%')
+	    time.sleep(0.2)
+	    os.system('clear')
+	    print('Getting IP--[####......]--40%')
+	    time.sleep(0.8)
+	    os.system('clear')
+	    print('Getting IP--[#####.....]--50%')
+	    time.sleep(0.7)
+	    os.system('clear')
+	    print('Getting IP--[######....]--60%')
+	    time.sleep(1)
+	    os.system('clear')
+	    print('Getting IP--[#######...]--70%')
+	    time.sleep(0.1)
+	    os.system('clear')
+	    print('Getting IP--[########..]--80%')
+	    time.sleep(0.9)
+	    os.system('clear')
+	    print('Getting IP--[#########.]--90%')
+	    time.sleep(0.7)
+	    os.system('clear')
+	    print('Getting IP--[##########]--100%')
+	    self.set_ip = (
+		    # 107.47.80.10 ip address booted when running terminal, does not replace
+		    # real ip address. "Cover Address"
+		    ipaddress.IPv4Address('107.47.80.10'), 
+		    ipaddress.ip_network('107.47.80.10/24',strict=False),
+		    ipaddress.ip_interface('107.47.80.10/24')
+	    )
+	    self.loading=False
+	    self.has_ip=True
+    if self.loading == False and self.has_ip == True:
+			os.system('echo -e "Done"')
+		  return "Done"
   def show_ip(self):
     return self.set_ip
       
