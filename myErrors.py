@@ -71,10 +71,3 @@ def _err_(type_,msg):
     return "Error type: FutureWarning"
   else:
     raise Exception("That error was not located. Sorry")
-
-f = True
-
-if f == False:  
-  _err_(2,'Not allowed')
-else:
-  _err_(4,'Too long')
