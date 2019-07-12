@@ -48,8 +48,8 @@ class set_ip:
       if not self.loading and self.has_ip:
         os.system('echo -e "SetupBoot Done!"')
       return
-    def show_ip(self):
-      return self.set_ip
+  def show_ip(self):
+    return self.set_ip
 
 def ip():
   l_p = set_ip()
