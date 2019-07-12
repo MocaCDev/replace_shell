@@ -87,7 +87,10 @@ def load():
 def replace():
   return
 def ip():
-  i = load_project()
-  i._get_ip()
-  i.show_ip()
-  return
+	i = load_project()
+	i._get_ip()
+	return
+def ip_():
+	ip = load_project()
+	ip.show_ip()
+	return
