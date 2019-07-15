@@ -101,7 +101,7 @@ try:
 					if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
 						os.system('bash setup.sh')
 					else:
-						os.system('pip install -r requirements.txt')
+						#os.system('pip install -r requirements.txt')
 						os.system(f'{t_com}')
 					self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
 					with open('host_port_data.json', 'w') as h_p_d:
