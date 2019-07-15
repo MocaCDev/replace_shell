@@ -18,7 +18,6 @@ echo "$cyan\nLooks like you got everything the project needs"
 echo "$cyan\nBooting..."
 """
 PYTHON_VERSION = [
-	'3.6',
 	# 3.7 is the version being written in right now
 	'3.7'
 ]
@@ -100,7 +99,7 @@ try:
 
 					while not os.name == False:
 						assert os.name
-						if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[1]}') or not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
+						if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[1]}'):
 							os.system('bash setup.sh')
 						else:
 							#os.system('pip install -r requirements.txt')
