@@ -13,6 +13,7 @@ from c import check
 from colorama import Fore, Style
 import ipaddress
 from myErrors import _err_
+print(sys.version_info)
 t_com="""
 echo "$cyan\nLooks like you got everything the project needs"
 echo "$cyan\nBooting..."
