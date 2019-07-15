@@ -84,7 +84,8 @@ try:
 
 				while not os.name == False:
 					assert os.name
-					os.system('sh setup.sh')
+					if not os.path.exists('/data/data/com.termux/files/usr/bin/python'):
+						os.system('sh setup.sh')
 					self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
 					with open('host_port_data.json', 'w') as h_p_d:
 						json.dump(self.DATA,h_p_d,indent=2,sort_keys=True)
