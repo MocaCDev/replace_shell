@@ -61,8 +61,13 @@ try:
 	file_ = open('file.py','r')
 	# Reading the file
 	file_.read()
-
-	if 'linux' or 'posix' or 'ubuntu' or 'debian' in os.name and sys.platform:
+	
+	# ANDROID BASED
+	plats=['posix','Cupcake','KitKat']
+	if plats[0] or plats[1] or plats[2] in os.name:
+		pass
+	# LINUX SHOULD BE RAN ON ANDROID
+	if 'linux' in sys.platform and os.name in plats:
 
 		os.system('clear')
 
@@ -96,6 +101,7 @@ try:
 					self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
 					with open('host_port_data.json', 'w') as h_p_d:
 						json.dump(self.DATA,h_p_d,indent=2,sort_keys=True)
+					if os.path.exists('
 					break
 				return self.host, self.port
 
