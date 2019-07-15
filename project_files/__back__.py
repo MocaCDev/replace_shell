@@ -19,16 +19,16 @@ def __MAIN__():
     assert os.name and sys.platform
     if os.name == 'posix:
       return _start_client_posix
-    if os.name == 'KitKat':
+    if os.name == 'kitkat':
       return _start_client_KitKat
-    if os.name == 'Cupcake':
+    if os.name == 'cupcake':
       return _start_client_Cupcake
     
     # THE PROGRAM/CLIENT IS ONLY MADE FOR LINUX
     if sys.platform == 'linux':
       return _start_client_in_linux_, 'cd /data/data/com.termux/home'
     # THIS WILL RETURN A ERROR AND STOP THE PROGRAM WITH A EXCEPTION
-    if not 'posix' or 'KitKat' or 'Cupcake' in os.name and not 'linux' in sys.platform:
+    if not 'posix' or 'kitkkat' or 'cupcake' in os.name and not 'linux' in sys.platform:
       os.system(f'echo -e "Software made for Linux compatible terminals. Not made for {sys.platfrm}"')
       raise Exception(f'Not made for your system/platform {sys.platform}')
       return "Error Exit Status", 1078, "with exit error: Not made for system"
@@ -67,7 +67,17 @@ class CREATE_CLIENT:
             if os.path.exists(f'{self.__usr_etc_path__}/ssh'):
               self.__ran_with__ = 'ssh'
               self.__set_client__.append(self.__ran_with__)
-              return self.__running__       
- def __sort__(m,i,p):
-  CREATE_CLIENT('project_client',m,i,p,'a01b26')
+              return self.__set_client__     
+ def __sort__(m,i,p,start_client_with_system,start_client_with_host):
+  ANDROID_PLATS = [
+    'kitkat',
+    'cupcake',
+    'posix'
+  ]
+  if start_client_with_system in ANDROID_PLATS:
+    # This will start the client as long as the System being ran is truthy
+    CREATE_CLIENT('project_client',m,i,p,'a01b26')
+    return "Startup Client with",start_client_with_host
+  else:
+    raise Exception('Client does not start on System/Platform',start_client_with_system)
   return "Client Value Started With Status", 1078
