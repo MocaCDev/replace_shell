@@ -35,6 +35,8 @@ __If you see python3.7 you're all set!__
 ``` ls ```
 ### ###
 __If you see python3.7m you're all set!__
+<br>
+__But if you don't then simply ```pkg install python```__
 
 # IF you already have python3 installed #
 
