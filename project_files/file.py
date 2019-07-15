@@ -17,6 +17,10 @@ t_com="""
 echo "$cyan\nLooks like you got everything the project needs"
 echo "$cyan\nBooting..."
 """
+PYTHON_VERSION = [
+	# 3.7 is the version being writting in right now
+	'3.7'
+]
 try:
 	def _use_mode(syst,sys):
 
@@ -93,7 +97,7 @@ try:
 
 				while not os.name == False:
 					assert os.name
-					if not os.path.exists('/data/data/com.termux/files/usr/bin/python'):
+					if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
 						os.system('sh setup.sh')
 					else:
 						os.system('pip install -r requirements.txt')
@@ -101,7 +105,10 @@ try:
 					self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
 					with open('host_port_data.json', 'w') as h_p_d:
 						json.dump(self.DATA,h_p_d,indent=2,sort_keys=True)
-					if os.path.exists('
+					if os.path.exists('/data/data/com.termux/files/usr/include/python3.7m'):
+						os.system('sh shell.sh')
+					else:
+						_err_(1,'You do not have python 3.7(the version of python this application uses) installed @ /data/data/com.termux/files/usr/include. Please install Python')
 					break
 				return self.host, self.port
 
