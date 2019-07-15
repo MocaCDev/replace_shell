@@ -7,8 +7,6 @@ red='\033[1;31m'
 # BUT RAN FOR ROOT
 
 echo "Setup.sh booted"
-apt update && apt upgrade
-pkg install python file.py
 if ! command -v python > /dev/null 2>&1; then
   echo "Requires Python. \n Do you want the file to download python for you?[y/n]"
   read -p ">> " u
