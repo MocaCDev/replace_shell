@@ -6,14 +6,14 @@
 # Made by ARACADERISE
 # For Termux
 
-import os, sys, json
+import os, sys, json, time
 from load import *
 from ip import *
+from __back__ import *
 from c import check
 from colorama import Fore, Style
-import ipaddress
+# import ipaddress
 from myErrors import _err_
-print(sys.version_info)
 t_com="""
 echo "$cyan\nLooks like you got everything the project needs"
 echo "$cyan\nBooting..."
@@ -24,6 +24,8 @@ PYTHON_VERSION = [
 ]
 try:
 	if sys.version_info > (3, float(3.6)):
+		__sort__()
+		time.sleep(6
 		def _use_mode(syst,sys):
 
 			def _write_(t_1):
