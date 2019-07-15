@@ -16,6 +16,10 @@ How to use?
 
 __Follow the steps below to make sure you have the following requirments before you use the application__
 
+> REQUIREMENTS INCLUDE <br>
+- python3.7 in directory /data/data/com.termux/files/usr/lib
+- python3.7m in directory /data/data/com.termux/files/usr/include
+
 > Requirment One: Python 3.7
 ### ###
 ``` cd /data/data/com.termux/files/usr/lib ```
@@ -23,7 +27,14 @@ __Follow the steps below to make sure you have the following requirments before 
 ``` ls ```
 ### ###
 __If you see python3.7 you're all set!__
-
+### ###
+> Requirment Two: python3.7m
+### ###
+``` cd /data/data/com.termux/files/usr/include ```
+<br>
+``` ls ```
+### ###
+__If you see python3.7m you're all set!__
 
 # IF you already have python3 installed #
 
