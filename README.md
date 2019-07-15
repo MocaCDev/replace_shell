@@ -47,12 +47,3 @@ git clone http://github.com/ARACADERISE/replace_shel.git
 cd replace_shell
 python file.py
 ```
-# If you don't. No worries. Just run the following: #
-
-### ###
-
-```
-git clone http://github.com/ARACADERISE/replace_shel.git
-cd replace_shell
-bash setup.py
-```
