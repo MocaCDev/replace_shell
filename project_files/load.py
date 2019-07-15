@@ -37,6 +37,9 @@ class load_project:
       os.system('clear')
       print('\n\nSetting Up--[######################]-- 100%\n\n')
       #os.system('pip install replace_shell')
+      loaded = open('file_loaded','w')
+      loaded.write('STATUS_ALERT: loaded')
+      loaded.close()
       self.loading=False
 def load():
   l = load_project()
