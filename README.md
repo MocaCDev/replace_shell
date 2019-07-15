@@ -19,6 +19,7 @@ __Follow the steps below to make sure you have the following requirments before 
 > REQUIREMENTS INCLUDE <br>
 - python3.7 in directory /data/data/com.termux/files/usr/lib
 - python3.7m in directory /data/data/com.termux/files/usr/include
+- Specified requirements declared in requirements.txt
 
 > Requirment One: Python 3.7
 ### ###
@@ -37,6 +38,7 @@ __If you see python3.7 you're all set!__
 __If you see python3.7m you're all set!__
 <br>
 __But if you don't then simply <br> ```cd``` <br> ```pkg install python```__
+### ###
 
 # IF you already have python3 installed #
 
@@ -45,6 +47,13 @@ __But if you don't then simply <br> ```cd``` <br> ```pkg install python```__
 ```
 git clone http://github.com/ARACADERISE/replace_shel.git
 cd replace_shell
-cd project_files
+cd project_files 
+```
+__Please look at the document requirements.txt and if none look familiar, then do the following command__
+```
+pip install -r requirements.txt
+```
+__Else skip to__
+```
 python file.py
 ```
