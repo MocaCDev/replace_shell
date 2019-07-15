@@ -9,68 +9,66 @@ class set_ip:
     self.set_ip=None
   def _get_ip(self):
     PATH='/data/data/com.termux/files/home'
-    if os.path.exists(f'{PATH}'):
-      if os.path.exists(f'{PATH}/replace_shell'):
-        NEW_PATH=f'{PATH}/replace_shell'
-        if not os.path.exists(f'{NEW_PATH}/ip'):
-          while self.loading and not self.has_ip:
-            os.system('clear')
-            print('\n\nGetting IP--[..................]--\n\n')
-            time.sleep(1)
-            os.system('clear')
-            print('\n\nGetting IP--[#.................]--1%\n\n')
-            time.sleep(0.4)
-            os.system('clear')
-            print('\n\nGetting IP--[##.................]--3%\n\n')
-            time.sleep(0.7)
-            os.system('clear')
-            print('\n\nGetting IP--[####...............]--10%\n\n')
-            time.sleep(0.2)
-            os.system('clear')
-            print('\n\nGetting IP--[######.............]--27%\n\n')
-            time.sleep(0.9)
-            os.system('clear')
-            print('\n\nGetting IP--[#########..........]--33%\n\n')
-            time.sleep(0.7)
-            os.system('clear')
-            print('\n\nGetting IP--[##########.........]--42%\n\n')
-            time.sleep(0.2)
-            os.system('clear')
-            print('\n\nGetting IP--[###########........]--51%\n\n')
-            time.sleep(0.9)
-            os.system('clear')
-            print('\n\nGetting IP--[##############.....]--65%\n\n')
-            time.sleep(0.4)
-            os.system('clear')
-            print('\n\nGetting IP--[################...]--78%\n\n')
-            time.sleep(1)
-            os.system('clear')
-            print('\n\nGetting IP--[#################..]--88%\n\n')
-            time.sleep(1.4)
-            os.system('clear')
-            print('\n\nGetting IP--[##################.]--97%\n\n')
-            time.sleep(0.6)
-            os.system('clear')
-            print('\n\nGetting IP--[###################]--100%\n\n')
-            os.system('clear')
-            self.set_ip = (
-              ipaddress.ip_address('147.80.46.18'),
-              ipaddress.ip_network('147.80.46.18/24',strict=False)
-            )
-            ip_ = '147.80.46.18'
-            self.loading=False
-            self.has_ip=True
-            if not self.loading and self.has_ip:
-              with open('ip','w') as i_p:
-                i_p = open('ip','w')
-                i_p.write(ip_)
-                i_p.close()
-              os.system('echo -e "SetupBoot Done!"')
-              print('\n')
-              #os.system(f'echo -e "--[ IP --> {str(self.set_ip)} ]"')
-              time.sleep(0.6)
-            break
-            return
+    NEW_PATH=f'{PATH}/replace_shell'
+    if not os.path.exists(f'{NEW_PATH}/ip'):
+      while self.loading and not self.has_ip:
+        os.system('clear')
+        print('\n\nGetting IP--[..................]--\n\n')
+        time.sleep(1)
+        os.system('clear')
+        print('\n\nGetting IP--[#.................]--1%\n\n')
+        time.sleep(0.4)
+        os.system('clear')
+        print('\n\nGetting IP--[##.................]--3%\n\n')
+        time.sleep(0.7)
+        os.system('clear')
+        print('\n\nGetting IP--[####...............]--10%\n\n')
+        time.sleep(0.2)
+        os.system('clear')
+        print('\n\nGetting IP--[######.............]--27%\n\n')
+        time.sleep(0.9)
+        os.system('clear')
+        print('\n\nGetting IP--[#########..........]--33%\n\n')
+        time.sleep(0.7)
+        os.system('clear')
+        print('\n\nGetting IP--[##########.........]--42%\n\n')
+        time.sleep(0.2)
+        os.system('clear')
+        print('\n\nGetting IP--[###########........]--51%\n\n')
+        time.sleep(0.9)
+        os.system('clear')
+        print('\n\nGetting IP--[##############.....]--65%\n\n')
+        time.sleep(0.4)
+        os.system('clear')
+        print('\n\nGetting IP--[################...]--78%\n\n')
+        time.sleep(1)
+        os.system('clear')
+        print('\n\nGetting IP--[#################..]--88%\n\n')
+        time.sleep(1.4)
+        os.system('clear')
+        print('\n\nGetting IP--[##################.]--97%\n\n')
+        time.sleep(0.6)
+        os.system('clear')
+        print('\n\nGetting IP--[###################]--100%\n\n')
+        os.system('clear')
+        self.set_ip = (
+          ipaddress.ip_address('147.80.46.18'),
+          ipaddress.ip_network('147.80.46.18/24',strict=False)
+        )
+        ip_ = '147.80.46.18'
+        self.loading=False
+        self.has_ip=True
+        if not self.loading and self.has_ip:
+          with i_p:
+            i_p = open('ip.txt','w')
+            i_p.write(ip_)
+            i_p.close()
+          os.system('echo -e "SetupBoot Done!"')
+          print('\n')
+          #os.system(f'echo -e "--[ IP --> {str(self.set_ip)} ]"')
+          time.sleep(0.6)
+          break
+          return
     else:
       pass
 def ip():
