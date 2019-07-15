@@ -22,7 +22,7 @@ __Follow the steps below to make sure you have the following requirments before 
 <br>
 ``` ls ```
 ### ###
-> If you see python3.7 you're all set!
+__If you see python3.7 you're all set!__
 
 
 # IF you already have python3 installed #
