@@ -1,7 +1,7 @@
 # Shell script replacing terminal using python
 # Use bash setup.sh if Python3 is not installed within device
 # Use python file.py if python3 is already installed
-# Runs bash file(setup.py) in the .py file(file.py) with os
+# Runs bash file(setup.sh) in the .py file(file.py) with os
 # User can insert code into file.py through bash by typing import..file.py==python_code_here
 # Made by ARACADERISE
 # For Termux
