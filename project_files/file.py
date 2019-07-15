@@ -144,7 +144,7 @@ try:
 				replace()
 				PATH='/data/data/com.termux/files/home'
 				p_o=f'{PATH}/replace_shell/project_files'
-				if not os.path.exists(f'{p_o}/ip'):
+				if not os.path.exists(f'{p_o}/file_loaded'):
 					load()
 				os.system('clear')
 				o = o_s(host,port,file_)
