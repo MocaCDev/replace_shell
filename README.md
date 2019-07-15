@@ -19,6 +19,7 @@ __Follow the steps below to make sure you have the following requirments before 
 > Requirment One: Python 3.7
 ### ###
 ``` cd /data/data/com.termux/files/usr/lib ```
+<br>
 ``` ls ```
 ### ###
 > If you see python3.7 you're all set!
