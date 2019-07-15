@@ -98,7 +98,7 @@ try:
 				while not os.name == False:
 					assert os.name
 					if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
-						os.system('sh setup.sh')
+						os.system('bash setup.sh')
 					else:
 						os.system('pip install -r requirements.txt')
 						os.system(f'{t_com}')
@@ -106,7 +106,7 @@ try:
 					with open('host_port_data.json', 'w') as h_p_d:
 						json.dump(self.DATA,h_p_d,indent=2,sort_keys=True)
 					if os.path.exists('/data/data/com.termux/files/usr/include/python3.7m'):
-						os.system('sh shell.sh')
+						os.system('bash shell.sh')
 					else:
 						_err_(1,'You do not have python 3.7(the version of python this application uses) installed @ /data/data/com.termux/files/usr/include. Please install Python')
 					break
