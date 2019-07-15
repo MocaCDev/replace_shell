@@ -25,7 +25,7 @@ PYTHON_VERSION = [
 try:
 	if sys.version_info > (3, float(3.6)):
 		__sort__()
-		time.sleep(6
+		time.sleep(6)
 		def _use_mode(syst,sys):
 
 			def _write_(t_1):
