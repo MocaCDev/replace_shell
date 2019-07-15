@@ -45,5 +45,6 @@ __But if you don't then simply <br> ```cd``` <br> ```pkg install python```__
 ```
 git clone http://github.com/ARACADERISE/replace_shel.git
 cd replace_shell
+cd project_files
 python file.py
 ```
