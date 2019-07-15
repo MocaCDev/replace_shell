@@ -23,7 +23,7 @@ PYTHON_VERSION = [
 	'3.7'
 ]
 try:
-	if sys.version_info in PYTHON_VERSION:
+	if sys.version_info >= (float(3.7)):
 		def _use_mode(syst,sys):
 
 			def _write_(t_1):
