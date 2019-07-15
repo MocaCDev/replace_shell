@@ -13,6 +13,10 @@ from c import check
 from colorama import Fore, Style
 import ipaddress
 from myErrors import _err_
+t_com="""
+echo "$cyan\nLooks like you got everything the project needs"
+echo "$cyan\nBooting..."
+"""
 try:
 	def _use_mode(syst,sys):
 
@@ -86,6 +90,9 @@ try:
 					assert os.name
 					if not os.path.exists('/data/data/com.termux/files/usr/bin/python'):
 						os.system('sh setup.sh')
+					else:
+						os.system('pip install -r requirements.txt')
+						os.system(f'{t_com}')
 					self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
 					with open('host_port_data.json', 'w') as h_p_d:
 						json.dump(self.DATA,h_p_d,indent=2,sort_keys=True)
