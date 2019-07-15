@@ -140,8 +140,9 @@ try:
 					continue
 		while not port == '' and not host == '':
 			replace()
-			PATH='/data/data/com.termux/files/usr/bin'
-			if os.path.exists(f'{PATH}/replace_shell'):
+			PATH='/data/data/com.termux/files/home'
+			p_o=f'{PATH}/replace_shell'
+			if not os.path.exists(f'{p_o}/ip'):
 				load()
 			os.system('clear')
 			o = o_s(host,port,file_)
