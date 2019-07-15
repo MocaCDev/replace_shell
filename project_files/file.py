@@ -86,7 +86,7 @@ try:
 				check_status=0
 				if not self.con == True:
 					P_PATH='/data/data/com.termux/files/home'
-					p=f'{P_PATH}/replace_shell'
+					p=f'{P_PATH}/replace_shell/project_files'
 					if not os.path.exists(f'{p}/ip'):
 						ip()
 					self.status=check_status
@@ -141,7 +141,7 @@ try:
 		while not port == '' and not host == '':
 			replace()
 			PATH='/data/data/com.termux/files/home'
-			p_o=f'{PATH}/replace_shell'
+			p_o=f'{PATH}/replace_shell/project_files'
 			if not os.path.exists(f'{p_o}/ip'):
 				load()
 			os.system('clear')
