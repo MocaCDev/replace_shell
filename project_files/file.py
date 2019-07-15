@@ -46,13 +46,13 @@ try:
 					return "Using platform posix"
 				posix()
 				return _write_(syst)
-			if syst == 'Cupcake':
+			if syst == 'cupcake':
 				print('Platform Used:',syst)
 				def Cupcake():
 					return "Using platform Cupcake"
 				Cupcake()
 				return _write_(syst)
-			if syst == 'KitKat':
+			if syst == 'kitkat':
 				print('Platform Used:',syst)
 				def KitKat():
 					return "Using platform KitKat"
@@ -69,7 +69,7 @@ try:
 		file_.read()
 
 		# ANDROID BASED
-		plats=['posix','Cupcake','KitKat']
+		plats=['posix','cupcake','kitkat']
 		if plats[0] or plats[1] or plats[2] in os.name:
 			pass
 		# LINUX SHOULD BE RAN ON ANDROID
