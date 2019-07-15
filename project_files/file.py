@@ -24,42 +24,40 @@ PYTHON_VERSION = [
 try:
 	def _use_mode(syst,sys):
 
-		def _write_(t_1,t_2):
-			write_to_file={'Device_Name':[t_1,t_2]}
+		def _write_(t_1):
+			write_to_file={'Device_Name':[t_1]}
 			with open('device_data.json','w') as d_d:
 				json.dump(write_to_file,d_d,indent=2,sort_keys=True)
 
 			# .txt
 			write_in_txt = open('device.txt','w')
-			wr=f'DEVICE:{t_1},{t_2}'
+			wr=f'DEVICE:{t_1}'
 			write_in_txt.write(wr)
 			write_in_txt.close()
 			return "Done"
 
-		if syst or sys == 'linux':
-			print('System boot in:',sys)
-			print('OS boot in:',syst)
-			def linux():
-				return _write_(syst, sys)
-			linux()
-		if syst or sys == 'posix':
-			print('System boot in:',sys)
-			print('OS boot in:',syst)
+		if syst == 'posix':
+			print('Platform Used:',syst)
 			def posix():
-				return _write_(syst, sys)
+				return "Using platform posix"
 			posix()
+			return _write_(syst)
+		if syst == 'Cupcake':
+			print('Platform Used:',syst)
+			def Cupcake():
+				return "Using platform Cupcake"
+			Cupcake()
+			return _write_(syst)
+		if syst == 'KitKat':
+			print('Platform Used:',syst)
+			def KitKat():
+				return "Using platform KitKat"
+			KitKat()
+			return _write_(syst)
 		if syst or sys == 'ubuntu':
-			print('System boot in:',sys)
-			print('OS boot in:',syst)
-			def ubuntu():
-				return _write_(syst, sys)
-			ubuntu()
+			return "Not available"
 		if syst or sys == 'debian':
-			print('System boot in:',sys)
-			print('OS boot in:',syst)
-			def debian():
-				return _write_(syst, sys)
-			debian()
+			return "Not available"
 
 	# Defining the main file(.py)
 	file_ = open('file.py','r')
@@ -87,7 +85,10 @@ try:
 			def _check_(self):
 				check_status=0
 				if not self.con == True:
-					ip()
+					P_PATH='/data/data/com.termux/files/home'
+					p=f'{P_PATH}/replace_shell'
+					if not os.path.exists(f'{p}/ip'):
+						ip()
 					self.status=check_status
 				return self.status
 			def run(self):
@@ -139,7 +140,9 @@ try:
 					continue
 		while not port == '' and not host == '':
 			replace()
-			load()
+			PATH='/data/data/com.termux/files/usr/bin'
+			if os.path.exists(f'{PATH}/replace_shell'):
+				load()
 			os.system('clear')
 			o = o_s(host,port,file_)
 			o._check_()
