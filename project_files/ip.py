@@ -59,10 +59,9 @@ class set_ip:
         self.loading=False
         self.has_ip=True
         if not self.loading and self.has_ip:
-          with i_p:
-            i_p = open('ip.txt','w')
-            i_p.write(ip_)
-            i_p.close()
+          i_p = open('ip.txt','w')
+          i_p.write(ip_)
+          i_p.close()
           os.system('echo -e "SetupBoot Done!"')
           print('\n')
           #os.system(f'echo -e "--[ IP --> {str(self.set_ip)} ]"')
