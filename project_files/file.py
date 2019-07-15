@@ -154,6 +154,6 @@ try:
 		else:
 			raise _err_(1,'Not available for your system')
 	else:
-		raise _err_(1,'You do not have python 3.6/3.7 installed')
+		raise _err_(1,'You do not have python 3.6/3.7 installed.')
 except KeyboardInterrupt or KeyError:
 	raise _err_(8,'Key error')
