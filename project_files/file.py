@@ -100,7 +100,7 @@ try:
 
 					while not os.name == False:
 						assert os.name
-						if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
+						if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[1]}') or not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
 							os.system('bash setup.sh')
 						else:
 							#os.system('pip install -r requirements.txt')
