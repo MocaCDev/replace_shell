@@ -19,4 +19,4 @@ if ! command -v python > /dev/null 2>&1; then
 fi 
 
 
-pip install -r requirements.txt
+#pip install -r requirements.txt
