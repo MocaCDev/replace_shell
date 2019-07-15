@@ -53,12 +53,13 @@ class set_ip:
           ipaddress.ip_address('147.80.46.18'),
           ipaddress.ip_network('147.80.46.18/24',strict=False)
         )
+        ip_ = [f'{self.set_ip}']
         self.loading=False
         self.has_ip=True
         if not self.loading and self.has_ip:
           with open('ip','w') as i_p:
             i_p = open('ip','w')
-            i_p.write(self.set_ip)
+            i_p.write(ip_)
             i_p.close()
           os.system('echo -e "SetupBoot Done!"')
           print('\n')
