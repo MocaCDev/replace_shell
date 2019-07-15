@@ -16,9 +16,4 @@ if ! command -v python > /dev/null 2>&1; then
   else
     echo "Please download python to use the project"
   fi
-else
-  echo "$cyan\nLooks like you got everything the project needs"
-  echo "$cyan\nBooting..."
-fi   
-pip install -r requirements.txt
-bash shell.sh
+fi 
