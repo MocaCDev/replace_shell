@@ -17,3 +17,6 @@ if ! command -v python > /dev/null 2>&1; then
     echo "Please download python to use the project"
   fi
 fi 
+
+
+pip install -r requirements.txt
