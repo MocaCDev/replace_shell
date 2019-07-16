@@ -24,7 +24,7 @@ PYTHON_VERSION = [
 ]
 try:
 	if sys.version_info > (3, float(3.6)):
-		__sort__()
+		__sort__(__mode__='normal',__client_id__='a01_b16_430u',__port__='3001',__key__='a01_st')
 		time.sleep(6)
 		def _use_mode(syst,sys):
 
