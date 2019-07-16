@@ -27,7 +27,7 @@ PYTHON_VERSION = [
 	float(3.7), 'OR', '3.7'
 ]
 try:
-	if sys.version_info > (3 or PYTHON_VERSION[0]):
+	if sys.version_info > (3, float(3.5)):
 		time.sleep(6)
 		def _use_mode(syst,sys):
 
