@@ -94,7 +94,6 @@ class CREATE_CLIENT:
   if start_client_with_system in ANDROID_PLATS:
     # This will start the client as long as the System being ran is truthy
     CREATE_CLIENT('project_client',m,i,p,'a01b26')
-    return "Startup Client with",start_client_with_host
+    return "Client Value Started With Status", 1078
   else:
     raise Exception('Client does not start on System/Platform',start_client_with_system)
-  return "Client Value Started With Status", 1078
