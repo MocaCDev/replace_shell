@@ -96,7 +96,7 @@ def __sort__(_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system):
     'Pie',
     'Oreo'
   ]
-  if start_client_with_system in ANDROID_PLATS:
+  if _start_client_with_system in ANDROID_PLATS:
     # This will start the client as long as the System being ran is truthy
     CREATE_CLIENT(_type_,_mode_,_client_id_,_port_,_key_)
     return "Client Value Started With Status", 1078
