@@ -55,7 +55,7 @@ class CREATE_CLIENT:
     self.__mode__=__mode__
     self.__client_id__=__client_id__
     self.__set_client__ = [object]
-    self.__SYS__ = object
+    self.__SYSs__ = object
     self.__port__=__port__
     self.__key__=__key__
     # MAIN PATH
@@ -80,8 +80,8 @@ class CREATE_CLIENT:
             if os.path.exists(f'{C_PATH}/bash'):
               self.__ran_with__ = ['bash','sh']
               self.__set_client__.append(self.__ran_with__)
-              self.__SYS__ = ['linux', 'ubuntu']
-              return self.__set_client__, self.__SYS__
+              self.__SYSs__ = ['linux', 'ubuntu']
+              return self.__set_client__, self.__SYSs__
  def __sort__(m,i,p,start_client_with_system,start_client_with_host):
   ANDROID_PLATS = [
     'KitKat',
