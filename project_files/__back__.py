@@ -13,7 +13,7 @@ _start_client_Cupcake = (CLIENT == 'startup_Cupcake', CLIENT_TYPE == 'Cupcake', 
 _start_client_Pie = (CLIENT == 'startup_Pie', CLIENT_TYPE == 'Pie', CLIENT_PRODUCT_ID == '')
 
 # LINUX STARTUP(default)
-_start_client_in_linux = (CLIENT = 'startup_linux', CLIENTIN = 'linux')
+_start_client_in_linux = (CLIENT == 'startup_linux', CLIENTIN == 'linux')
 
 def __MAIN__():
   # This will steer clear of any possible(80%) issues within the future of replace_shell
