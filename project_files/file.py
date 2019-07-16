@@ -9,7 +9,7 @@
 import os, sys, json, time
 from load import *
 from ip import *
-from __back__ import __sort__
+from __back__ import __sort__, __MAIN__
 from c import check
 from colorama import Fore, Style
 # import ipaddress
@@ -24,6 +24,7 @@ PYTHON_VERSION = [
 ]
 try:
 	if sys.version_info > (3, float(3.6)):
+		__MAIN__()
 		__sort__(__mode__='normal',__client_id__='a01_b16_430u',__port__='3001',__key__='a01_st')
 		time.sleep(6)
 		def _use_mode(syst,sys):
