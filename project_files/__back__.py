@@ -19,8 +19,8 @@ def __MAIN__():
   # This will steer clear of any possible(80%) issues within the future of replace_shell
   if os.path.exists('/data/data/com.termux/usr/lib/python3.7'):
     assert os.name and sys.platform
-    if os.name == 'posix:
-      CLIEND_PRODUCT_ID = 'a01_posix'
+    if os.name == 'posix':
+      CLIENT_PRODUCT_ID = 'a01_posix'
       return _start_client_posix, CLIEND_PRODUCT_ID
     if os.name == 'KitKat':
       CLIEND_PRODUCT_ID = 'a01_KitKat_vyt'
