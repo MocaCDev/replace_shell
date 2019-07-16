@@ -11,6 +11,7 @@ _start_client_posix = (CLIENT == 'startup_posix', CLIENT_TYPE == 'posix', CLIENT
 _start_client_KitKat = (CLIENT == 'startup_KitKat', CLIENT_TYPE == 'KitKat', CLIENT_PRODUCT_ID == '')
 _start_client_Cupcake = (CLIENT == 'startup_Cupcake', CLIENT_TYPE == 'Cupcake', CLIENT_PRODUCT_ID == '')
 _start_client_Pie = (CLIENT == 'startup_Pie', CLIENT_TYPE == 'Pie', CLIENT_PRODUCT_ID == '')
+_start_client_Oreo = (CLIENT == 'startup_Oreo', CLIENT_TYPE == 'Oreo', CLIENT_PRODUCT_ID == '')
 
 # LINUX STARTUP(default)
 _start_client_in_linux = (CLIENT == 'startup_linux', CLIENTIN == 'linux')
@@ -39,7 +40,7 @@ def __MAIN__():
     if sys.platform == 'linux':
       return _start_client_in_linux_, 'cd /data/data/com.termux/home'
     # THIS WILL RETURN A ERROR AND STOP THE PROGRAM WITH A EXCEPTION
-    if not 'posix' or 'kitkkat' or 'cupcake' in os.name and not 'linux' in sys.platform:
+    if not 'posix' or 'KitKat' or 'Cupcake' or 'Oreo' in os.name and not 'linux' in sys.platform:
       os.system(f'echo -e "Software made for Linux compatible terminals. Not made for {sys.platfrm}"')
       raise Exception(f'Not made for your system/platform {sys.platform}')
       return "Error Exit Status", 1078, "with exit error: Not made for system"
