@@ -48,7 +48,7 @@ def __MAIN__():
     os.system('pkg install python')
 
 class CREATE_CLIENT:
-  def __init__(self,__type__,__mode__,__client_id__,__port___,__key__):
+  def __init__(self,__type__,__mode__,__client_id__,__port__,__key__):
     self.__type__=__type__
     self.__running__= True
     self.__ran_with__ = object
@@ -87,7 +87,7 @@ class CREATE_CLIENT:
           else:
             raise Exception('There was a error configuring your systems commands(of which should be bash and sh if you use android).')
             return "Failed to setup client with exit status",1078
-def __sort__(m,i,p,start_client_with_system,start_client_with_host):
+def __sort__(_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system):
   ANDROID_PLATS = [
     'KitKat',
     'Cupcake',
@@ -98,7 +98,7 @@ def __sort__(m,i,p,start_client_with_system,start_client_with_host):
   ]
   if start_client_with_system in ANDROID_PLATS:
     # This will start the client as long as the System being ran is truthy
-    CREATE_CLIENT('project_client',m,i,p,'a01b26')
+    CREATE_CLIENT(_type_,_mode_,_client_id_,_port_,_key_)
     return "Client Value Started With Status", 1078
   else:
     raise Exception('Client does not start on System/Platform',start_client_with_system)
