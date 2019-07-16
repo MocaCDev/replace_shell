@@ -96,6 +96,7 @@ try:
 				def run(self):
 					_check_ = check(self.host, self.port)
 					_check_.check()
+					
 					print('Running with host:', self.host,'\nAnd port:',self.port)
 
 					while not os.name == False:
@@ -104,7 +105,7 @@ try:
 						__sort__(_type_='user_client',_mode_='normal',_client_id_='a01_b16_430u',_port_=self.port,__key_='a01_st',_start_client_with_system=os.name)
 						if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
 							os.system('bash setup.sh')
-						else:
+						if os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
 							#os.system('pip install -r requirements.txt')
 							os.system(f'{t_com}')
 						self.DATA.update({'Host_Connection':self.host,'Port_Connection':self.port})
