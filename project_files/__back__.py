@@ -3,7 +3,7 @@ import os,sys
 
 CLIENT_TYPE=''
 CLIENTIN = [object]
-CLIEND_PRODUCT_ID = object
+CLIENT_PRODUCT_ID = object
 CLIENT=''
 
 # PLAT NAME STARTUPS
