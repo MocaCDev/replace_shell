@@ -3,12 +3,14 @@ import os,sys
 
 CLIENT_TYPE=''
 CLIENTIN = [object]
+CLIEND_PRODUCT_ID = object
 CLIENT=''
 
 # PLAT NAME STARTUPS
-_start_client_posix = (CLIENT == 'startup_posix', CLIENT_TYPE == 'posix')
-_start_client_KitKat = (CLIENT == 'startup_KitKat', CLIENT_TYPE == 'KitKat')
-_start_client_Cupcake = (CLIENT == 'startup_Cupcake', CLIENT_TYPE == 'Cupcake')
+_start_client_posix = (CLIENT == 'startup_posix', CLIENT_TYPE == 'posix', CLIENT_PRODUCT_ID == '')
+_start_client_KitKat = (CLIENT == 'startup_KitKat', CLIENT_TYPE == 'KitKat', CLIENT_PRODUCT_ID == '')
+_start_client_Cupcake = (CLIENT == 'startup_Cupcake', CLIENT_TYPE == 'Cupcake', CLIENT_PRODUCT_ID == '')
+_start_client_Pie = (CLIENT == 'startup_Pie', CLIENT_TYPE == 'Pie', CLIENT_PRODUCT_ID == '')
 
 # LINUX STARTUP(default)
 _start_client_in_linux = (CLIENT = 'startup_linux', CLIENTIN = 'linux')
@@ -18,11 +20,20 @@ def __MAIN__():
   if os.path.exists('/data/data/com.termux/usr/lib/python3.7'):
     assert os.name and sys.platform
     if os.name == 'posix:
-      return _start_client_posix
-    if os.name == 'kitkat':
-      return _start_client_KitKat
-    if os.name == 'cupcake':
-      return _start_client_Cupcake
+      CLIEND_PRODUCT_ID = 'a01_posix'
+      return _start_client_posix, CLIEND_PRODUCT_ID
+    if os.name == 'KitKat':
+      CLIEND_PRODUCT_ID = 'a01_KitKat_vyt'
+      return _start_client_KitKat, CLIEND_PRODUCT_ID
+    if os.name == 'Cupcake':
+      CLIEND_PRODUCT_ID = 'a01_Cupcake_vytr'
+      return _start_client_Cupcake, CLIEND_PRODUCT_ID
+    if os.name == 'Pie':
+      CLIEND_PRODUCT_ID = 'a01_Pie_pytr'
+      return _start_client_Pie, CLIEND_PRODUCT_ID
+    if os.name == 'Oreo':
+      CLIEND_PRODUCT_ID = 'a01_Oreo_ottr'
+      return _start_client_Oreo, CLIEND_PRODUCT_ID
     
     # THE PROGRAM/CLIENT IS ONLY MADE FOR LINUX
     if sys.platform == 'linux':
@@ -44,10 +55,12 @@ class CREATE_CLIENT:
     self.__mode__=__mode__
     self.__client_id__=__client_id__
     self.__set_client__ = [object]
+    self.__SYS__ = object
     self.__port__=__port__
     self.__key__=__key__
     # MAIN PATH
-    self.__home_path__='/data/data/com.termux/files/home'
+    self.__usr_share_path__='/data/data/com.termux/files/usr/share'
+    self.__usr_path__='/data/data/com.termux/files/usr'
     self.__usr_etc_path__='/data/data/com.termux/files/usr/etc'
     return "Assignments Values With Status", 1078
   def __client_starter__(self):
@@ -62,17 +75,21 @@ class CREATE_CLIENT:
             op.write('__mode__ '+str(self.__mode__) + '\n' + '__client_id__ ' + str(self.__client_id__))
             op.close()
             return self.__mode__,self.__client_id__
-          # The client will then use ssh
-          if os.path.exists(f'{self.__usr_etc_path__}':
-            if os.path.exists(f'{self.__usr_etc_path__}/ssh'):
-              self.__ran_with__ = 'ssh'
+          if os.path.exists(f'{self.__usr_share_path__}/doc'):
+            C_PATH = f'{self.__usr_share_path__}/doc'
+            if os.path.exists(f'{C_PATH}/bash'):
+              self.__ran_with__ = ['bash','sh']
               self.__set_client__.append(self.__ran_with__)
-              return self.__set_client__     
+              self.__SYS__ = ['linux', 'ubuntu']
+              return self.__set_client__, self.__SYS__
  def __sort__(m,i,p,start_client_with_system,start_client_with_host):
   ANDROID_PLATS = [
-    'kitkat',
-    'cupcake',
-    'posix'
+    'KitKat',
+    'Cupcake',
+    # CHROMEBOOKS RUN ANDROID
+    'posix',
+    'Pie',
+    'Oreo'
   ]
   if start_client_with_system in ANDROID_PLATS:
     # This will start the client as long as the System being ran is truthy
