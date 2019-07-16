@@ -84,10 +84,13 @@ class CREATE_CLIENT:
               self.__set_client__.append(self.__ran_with__)
               self.__SYSs__ = ['linux', 'ubuntu']
               return self.__set_client__, self.__SYSs__
-          # Just in case it doesn't there may be some type of bug so we'll just print a Exception error
+            # Just in case it doesn't there may be some type of bug so we'll just print a Exception error
+            else:
+              raise Exception('There was a error configuring your systems commands(of which should be bash and sh if you use android).')
+              return "Failed to setup client with exit status",1078
           else:
-            raise Exception('There was a error configuring your systems commands(of which should be bash and sh if you use android).')
-            return "Failed to setup client with exit status",1078
+            # This shouldn't be a problem. The path /data/data/com.termux/files/usr/share/doc should exists in everyones Termux
+            pass
         else:
           # This shouldn't even be a problem
           pass
