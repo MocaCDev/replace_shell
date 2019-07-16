@@ -61,6 +61,7 @@ class CREATE_CLIENT:
     # MAIN PATHS
     self.__usr_share_path__='/data/data/com.termux/files/usr/share'
     self.__usr_path__='/data/data/com.termux/files/usr'
+    self.__home_path__='/data/data/com.termux/files/home'
     self.__usr_etc_path__='/data/data/com.termux/files/usr/etc'
   def __client_starter__(self):
     while self.__running__:
