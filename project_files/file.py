@@ -75,8 +75,6 @@ try:
 		if 'linux' in sys.platform and os.name in plats:
 			
 			os.system('clear')
-			__MAIN__()
-			__sort__(_type_='user_client',_mode_='normal',_client_id_='a01_b16_430u',__port__='3001',__key__='a01_st',_start_client_with_system=os.name)
 			_use_mode(os.name,sys.platform)
 
 			class o_s:
@@ -102,6 +100,8 @@ try:
 
 					while not os.name == False:
 						assert os.name
+						__MAIN__()
+						__sort__(_type_='user_client',_mode_='normal',_client_id_='a01_b16_430u',__port__=self.port,__key__='a01_st',_start_client_with_system=os.name)
 						if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
 							os.system('bash setup.sh')
 						else:
