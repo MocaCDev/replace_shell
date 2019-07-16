@@ -88,6 +88,11 @@ class CREATE_CLIENT:
           else:
             raise Exception('There was a error configuring your systems commands(of which should be bash and sh if you use android).')
             return "Failed to setup client with exit status",1078
+        else:
+          raise Exception('Error')
+      else:
+        raise Exception('Error')
+      break
 def __sort__(_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system):
   ANDROID_PLATS = [
     'KitKat',
