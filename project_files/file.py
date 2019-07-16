@@ -9,7 +9,7 @@
 import os, sys, json, time
 from load import *
 from ip import *
-from __back__ import *
+from __back__ import __sort__
 from c import check
 from colorama import Fore, Style
 # import ipaddress
