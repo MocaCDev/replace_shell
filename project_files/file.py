@@ -24,7 +24,6 @@ PYTHON_VERSION = [
 ]
 try:
 	if sys.version_info > (3, float(3.6)):
-		__MAIN__()
 		time.sleep(6)
 		def _use_mode(syst,sys):
 
@@ -76,9 +75,8 @@ try:
 		if 'linux' in sys.platform and os.name in plats:
 			
 			os.system('clear')
-			
+			__MAIN__()
 			__sort__(_type_='user_client',_mode_='normal',_client_id_='a01_b16_430u',__port__='3001',__key__='a01_st',_start_client_with_system=os.name)
-			
 			_use_mode(os.name,sys.platform)
 
 			class o_s:
