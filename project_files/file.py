@@ -19,11 +19,15 @@ echo "$cyan\nLooks like you got everything the project needs"
 echo "$cyan\nBooting..."
 """
 PYTHON_VERSION = [
+	# Lowest available
+	'3.5',
+	# Second lowest version
+	'3.6',
 	# 3.7 is the version being written in right now
 	'3.7'
 ]
 try:
-	if sys.version_info > (float(3.5)):
+	if sys.version_info > (PYTHON_VERSION[0]):
 		time.sleep(6)
 		def _use_mode(syst,sys):
 
