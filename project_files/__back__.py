@@ -21,19 +21,19 @@ def __MAIN__():
     assert os.name and sys.platform
     if os.name == 'posix':
       CLIENT_PRODUCT_ID = 'a01_posix'
-      return _start_client_posix, CLIEND_PRODUCT_ID
+      return _start_client_posix, CLIENT_PRODUCT_ID
     if os.name == 'KitKat':
-      CLIEND_PRODUCT_ID = 'a01_KitKat_vyt'
-      return _start_client_KitKat, CLIEND_PRODUCT_ID
+      CLIENT_PRODUCT_ID = 'a01_KitKat_vyt'
+      return _start_client_KitKat, CLIENT_PRODUCT_ID
     if os.name == 'Cupcake':
-      CLIEND_PRODUCT_ID = 'a01_Cupcake_vytr'
-      return _start_client_Cupcake, CLIEND_PRODUCT_ID
+      CLIENT_PRODUCT_ID = 'a01_Cupcake_vytr'
+      return _start_client_Cupcake, CLIENT_PRODUCT_ID
     if os.name == 'Pie':
-      CLIEND_PRODUCT_ID = 'a01_Pie_pytr'
-      return _start_client_Pie, CLIEND_PRODUCT_ID
+      CLIENT_PRODUCT_ID = 'a01_Pie_pytr'
+      return _start_client_Pie, CLIENT_PRODUCT_ID
     if os.name == 'Oreo':
-      CLIEND_PRODUCT_ID = 'a01_Oreo_ottr'
-      return _start_client_Oreo, CLIEND_PRODUCT_ID
+      CLIENT_PRODUCT_ID = 'a01_Oreo_ottr'
+      return _start_client_Oreo, CLIENT_PRODUCT_ID
     
     # THE PROGRAM/CLIENT IS ONLY MADE FOR LINUX
     if sys.platform == 'linux':
