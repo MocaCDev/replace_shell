@@ -89,9 +89,11 @@ class CREATE_CLIENT:
             raise Exception('There was a error configuring your systems commands(of which should be bash and sh if you use android).')
             return "Failed to setup client with exit status",1078
         else:
-          raise Exception('Error')
+          # This shouldn't even be a problem
+          pass
       else:
-        raise Exception('Error')
+        # This too shouldn't be a problem
+        pass
       break
 def __sort__(_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system):
   ANDROID_PLATS = [
