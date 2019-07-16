@@ -160,3 +160,5 @@ try:
 		raise _err_(1,'This applications requires at least python version 3.5 and up. This you do not have. Please install python 3.5 or a newer version to use this application')
 except KeyboardInterrupt or KeyError:
 	raise _err_(8,'Key error')
+finally:
+	return "Exiting application with exit status", 1078
