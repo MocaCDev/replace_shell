@@ -20,14 +20,14 @@ echo "$cyan\nBooting..."
 """
 PYTHON_VERSION = [
 	# Lowest available
-	'3.5',
+	float(3.5), 'OR', '3.5',
 	# Second lowest version
-	'3.6',
+	float(3.6), 'OR', '3.6',
 	# 3.7 is the version being written in right now
-	'3.7'
+	float(3.7), 'OR', '3.7'
 ]
 try:
-	if sys.version_info > (PYTHON_VERSION[0]):
+	if sys.version_info > (3 or PYTHON_VERSION[0]):
 		time.sleep(6)
 		def _use_mode(syst,sys):
 
