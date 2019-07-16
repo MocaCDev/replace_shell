@@ -75,6 +75,7 @@ class CREATE_CLIENT:
             op.write('__mode__ '+str(self.__mode__) + '\n' + '__client_id__ ' + str(self.__client_id__))
             op.close()
             return self.__mode__,self.__client_id__
+          # Since termux is android/android phone based this should always evaluate truthy
           if os.path.exists(f'{self.__usr_share_path__}/doc'):
             C_PATH = f'{self.__usr_share_path__}/doc'
             if os.path.exists(f'{C_PATH}/bash'):
@@ -82,6 +83,10 @@ class CREATE_CLIENT:
               self.__set_client__.append(self.__ran_with__)
               self.__SYSs__ = ['linux', 'ubuntu']
               return self.__set_client__, self.__SYSs__
+          # Just in case it doesn't there may be some type of bug so we'll just print a Exception error
+          else:
+            raise Exception('There was a error configuring your systems commands(of which should be bash and sh if you use android).')
+            return "Failed to setup client with exit status',1078
  def __sort__(m,i,p,start_client_with_system,start_client_with_host):
   ANDROID_PLATS = [
     'KitKat',
