@@ -101,7 +101,7 @@ try:
 					while not os.name == False:
 						assert os.name
 						__MAIN__()
-						__sort__(_type_='user_client',_mode_='normal',_client_id_='a01_b16_430u',_port_=self.port,_key_='a01_st',_start_client_with_system=os.name)
+						__sort__(_type_='user_client',_mode_='normal',_client_id_='a01_b16_430u',_port_=self.port,__key_='a01_st',_start_client_with_system=os.name)
 						if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
 							os.system('bash setup.sh')
 						else:
