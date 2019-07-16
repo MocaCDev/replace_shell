@@ -161,4 +161,4 @@ try:
 except KeyboardInterrupt or KeyError:
 	raise _err_(8,'Key error')
 finally:
-	return "Exiting application with exit status", 1078
+	pass
