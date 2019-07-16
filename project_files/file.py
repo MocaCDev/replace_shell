@@ -157,6 +157,6 @@ try:
 		else:
 			raise _err_(1,'Not available for your system')
 	else:
-		raise _err_(1,'You do not have python 3.7 installed.')
+		raise _err_(1,'This applications requires at least python version 3.5 and up. This you do not have. Please install python 3.5 or a newer version to use this application')
 except KeyboardInterrupt or KeyError:
 	raise _err_(8,'Key error')
