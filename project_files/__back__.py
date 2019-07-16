@@ -102,4 +102,4 @@ def __sort__(_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system):
     client.__client_starter__()
     return "Client Value Started With Status", 1078
   else:
-    raise Exception('Client does not start on System/Platform',start_client_with_system)
+    raise Exception('Client does not start on System/Platform',_start_client_with_system)
