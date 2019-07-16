@@ -2,7 +2,7 @@ import os,sys
 # "BACKEND" SECTION
 
 CLIENT_TYPE=''
-CLIENTIN = [object]
+CLIENTIN = object
 CLIENT_PRODUCT_ID = object
 CLIENT=''
 
