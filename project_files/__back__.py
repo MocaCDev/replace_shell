@@ -67,8 +67,8 @@ class CREATE_CLIENT:
     while self.__running__:
       # Appended ip request to create a __mode__ & __client_id__ based file
       if os.path.exists(f'{self.__home_path__}'):
-        if os.path.exists(f'{self.__path__}/replace_shell'):
-          self.__n__p__='self.__path__/replace_shell'
+        if os.path.exists(f'{self.__home_path__}/replace_shell'):
+          self.__n__p__='self.__home_path__/replace_shell'
           if os.path.exists(f'{self.__n__p__}/ip'):
             # WRITE
             op=open('__mode__','w')
