@@ -38,7 +38,7 @@ def __MAIN__():
     
     # THE PROGRAM/CLIENT IS ONLY MADE FOR LINUX
     if sys.platform == 'linux':
-      return _start_client_in_linux_, 'cd /data/data/com.termux/home'
+      return _start_client_in_linux, 'cd /data/data/com.termux/home'
     # THIS WILL RETURN A ERROR AND STOP THE PROGRAM WITH A EXCEPTION
     if not 'posix' or 'KitKat' or 'Cupcake' or 'Oreo' in os.name and not 'linux' in sys.platform:
       os.system(f'echo -e "Software made for Linux compatible terminals. Not made for {sys.platfrm}"')
