@@ -17,7 +17,7 @@ _start_client_in_linux = (CLIENT == 'startup_linux', CLIENTIN == 'linux')
 
 def __MAIN__():
   # This will steer clear of any possible(80%) issues within the future of replace_shell
-  if os.path.exists('/data/data/com.termux/usr/lib/python3.7'):
+  if os.path.exists('/data/data/com.termux/files/usr/lib/python3.7'):
     assert os.name and sys.platform
     if os.name == 'posix':
       CLIENT_PRODUCT_ID = 'a01_posix'
