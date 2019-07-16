@@ -58,11 +58,10 @@ class CREATE_CLIENT:
     self.__SYSs__ = object
     self.__port__=__port__
     self.__key__=__key__
-    # MAIN PATH
+    # MAIN PATHS
     self.__usr_share_path__='/data/data/com.termux/files/usr/share'
     self.__usr_path__='/data/data/com.termux/files/usr'
     self.__usr_etc_path__='/data/data/com.termux/files/usr/etc'
-    return "Assignments Values With Status", 1078
   def __client_starter__(self):
     while self.__running__:
       # Appended ip request to create a __mode__ & __client_id__ based file
@@ -98,7 +97,8 @@ def __sort__(_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system):
   ]
   if _start_client_with_system in ANDROID_PLATS:
     # This will start the client as long as the System being ran is truthy
-    CREATE_CLIENT(_type_,_mode_,_client_id_,_port_,__key_)
+    client = CREATE_CLIENT(_type_,_mode_,_client_id_,_port_,__key_)
+    client.__client_starter__()
     return "Client Value Started With Status", 1078
   else:
     raise Exception('Client does not start on System/Platform',start_client_with_system)
