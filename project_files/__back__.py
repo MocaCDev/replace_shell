@@ -47,6 +47,17 @@ def __MAIN__(number):
   else:
     os.system('apt update && apt upgrade')
     os.system('pkg install python')
+    
+def _check_name_(name,r_f_t_o,c_startup,s_client,s_syss):
+  if name == 'posix':
+    while r_f_t_o:
+      c_startup = f'a01-{name}/{__MAIN__(1)}c_c_'
+      if r_f_t_o == True:
+        r_f_t_o = False
+        break
+      return c_startup, s_client, s_syss
+    return "Client bootup done with exit status",1078
+  
 
 class CREATE_CLIENT:
   def __init__(self,con,__type__,__mode__,__client_id__,__port__,__key__):
@@ -87,10 +98,7 @@ class CREATE_CLIENT:
               self.__SYSs__ = ['linux', 'ubuntu']
               # Eveluates truthy
               if 'sh' or 'bash' in  self.__ran_with__:
-                if os.name == 'posix':
-                  while self.__run_for_time_if__:
-                    self.__client_startup = f'a01-{os.name}/{__MAIN__(1)}'
-                    return self.__client_startup__, self.__set_client__, self.__SYSs__
+                _check_name_(os.name,self.__run_for_time_of__,self.__client_startup__,self.__set_client__,self.__SYSs__)
             # Just in case it doesn't there may be some type of bug so we'll just print a Exception error
             else:
               raise Exception('There was a error configuring your systems commands(of which should be bash and sh if you use android).')
