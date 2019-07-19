@@ -39,12 +39,13 @@ def __MAIN__(number):
     # THE PROGRAM/CLIENT IS ONLY MADE FOR LINUX
     if number == 1 or 2 or 3 or 4 or 5 and sys.platform == 'linux':
       return _start_client_in_linux, 'cd /data/data/com.termux/home'
-    # THIS WILL RETURN A ERROR AND STOP THE PROGRAM WITH A EXCEPTION
-    if not 'posix' or 'KitKat' or 'Cupcake' or 'Oreo' in os.name and not 'linux' in sys.platform:
-      os.system(f'echo -e "Software made for Linux compatible terminals. Not made for {sys.platfrm}"')
-      raise Exception(f'Not made for your system/platform {sys.platform}')
-      return "Error Exit Status", 1078, "with exit error: Not made for system"
-  else:
+    else:
+      # THIS WILL RETURN A ERROR AND STOP THE PROGRAM WITH A EXCEPTION
+      if not 'posix' or 'KitKat' or 'Cupcake' or 'Oreo' in os.name and not 'linux' in sys.platform:
+        os.system(f'echo -e "Software made for Linux compatible terminals. Not made for {sys.platfrm}"')
+        raise Exception(f'Not made for your system/platform {sys.platform}')
+        return "Error Exit Status", 1078, "with exit error: Not made for system"
+    else:
     os.system('apt update && apt upgrade')
     os.system('pkg install python')
     
