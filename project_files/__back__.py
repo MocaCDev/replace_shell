@@ -83,8 +83,10 @@ class CREATE_CLIENT:
       # Appended ip request to create a __mode__ & __client_id__ based file
       if os.path.exists(f'{self.__home_path__}'):
         if os.path.exists(f'{self.__home_path__}/replace_shell'):
-          self.__n__p__='self.__home_path__/replace_shell'
-          if os.path.exists(f'{self.__n__p__}/ip'):
+          self.__n__p__='self.__home_path__/replace_shell/project_files'
+          # This will evaluate truthy for both. Kind of useless but we want the data uploaded even at fault of the
+          # File ip not existing
+          if os.path.exists(f'{self.__n__p__}/ip') or not os.path.exists(f'{self.__n__p__}/ip'):
             # WRITE
             op=open('__mode__','w')
             op.write('__mode__ '+str(self.__mode__) + '\n' + '__client_id__ ' + str(self.__client_id__))
