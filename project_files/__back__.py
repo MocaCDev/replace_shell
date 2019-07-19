@@ -37,7 +37,7 @@ def __MAIN__(number):
       return _start_client_Oreo, CLIENT_PRODUCT_ID
     
     # THE PROGRAM/CLIENT IS ONLY MADE FOR LINUX
-    if sys.platform == 'linux':
+    if number == 1 or 2 or 3 or 4 or 5 and sys.platform == 'linux':
       return _start_client_in_linux, 'cd /data/data/com.termux/home'
     # THIS WILL RETURN A ERROR AND STOP THE PROGRAM WITH A EXCEPTION
     if not 'posix' or 'KitKat' or 'Cupcake' or 'Oreo' in os.name and not 'linux' in sys.platform:
