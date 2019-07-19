@@ -67,7 +67,7 @@ class CREATE_CLIENT:
     self.__ran_with__ = object
     self.__run_for_time_of__ = con
     self.__mode__=__mode__
-    self.__client_startup = object
+    self.__client_startup__ = object
     self.__client_id__=__client_id__
     self.__set_client__ = [object]
     self.__SYSs__ = object
