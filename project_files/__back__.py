@@ -16,23 +16,23 @@ _start_client_Oreo = (CLIENT == 'startup_Oreo', CLIENT_TYPE == 'Oreo', CLIENT_PR
 # LINUX STARTUP(default)
 _start_client_in_linux = (CLIENT == 'startup_linux', CLIENTIN == 'linux')
 
-def __MAIN__():
+def __MAIN__(number):
   # This will steer clear of any possible(80%) issues within the future of replace_shell
   if os.path.exists('/data/data/com.termux/files/usr/lib/python3.7'):
     assert os.name and sys.platform
-    if os.name == 'posix':
+    if number == 1 and os.name == 'posix':
       CLIENT_PRODUCT_ID = 'a01_posix'
       return _start_client_posix, CLIENT_PRODUCT_ID
-    if os.name == 'KitKat':
+    if number == 2 and os.name == 'KitKat':
       CLIENT_PRODUCT_ID = 'a01_KitKat_vyt'
       return _start_client_KitKat, CLIENT_PRODUCT_ID
-    if os.name == 'Cupcake':
+    if number == 3 and os.name == 'Cupcake':
       CLIENT_PRODUCT_ID = 'a01_Cupcake_vytr'
       return _start_client_Cupcake, CLIENT_PRODUCT_ID
-    if os.name == 'Pie':
+    if number == 4 and os.name == 'Pie':
       CLIENT_PRODUCT_ID = 'a01_Pie_pytr'
       return _start_client_Pie, CLIENT_PRODUCT_ID
-    if os.name == 'Oreo':
+    if number == 5 and os.name == 'Oreo':
       CLIENT_PRODUCT_ID = 'a01_Oreo_ottr'
       return _start_client_Oreo, CLIENT_PRODUCT_ID
     
@@ -49,11 +49,13 @@ def __MAIN__():
     os.system('pkg install python')
 
 class CREATE_CLIENT:
-  def __init__(self,__type__,__mode__,__client_id__,__port__,__key__):
+  def __init__(self,con,__type__,__mode__,__client_id__,__port__,__key__):
     self.__type__=__type__
     self.__running__= True
     self.__ran_with__ = object
+    self.__run_for_time_of__ = con
     self.__mode__=__mode__
+    self.__client_startup = object
     self.__client_id__=__client_id__
     self.__set_client__ = [object]
     self.__SYSs__ = object
@@ -83,7 +85,12 @@ class CREATE_CLIENT:
               self.__ran_with__ = ['bash','sh']
               self.__set_client__.append(self.__ran_with__)
               self.__SYSs__ = ['linux', 'ubuntu']
-              return self.__set_client__, self.__SYSs__
+              # Eveluates truthy
+              if 'sh' or 'bash' in  self.__ran_with__:
+                if os.name == 'posix':
+                  while self.__run_for_time_if__:
+                    self.__client_startup = f'a01-{os.name}/{__MAIN__(1)}'
+                    return self.__client_startup__, self.__set_client__, self.__SYSs__
             # Just in case it doesn't there may be some type of bug so we'll just print a Exception error
             else:
               raise Exception('There was a error configuring your systems commands(of which should be bash and sh if you use android).')
@@ -98,7 +105,7 @@ class CREATE_CLIENT:
         # This too shouldn't be a problem
         pass
       break
-def __sort__(_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system):
+def __sort__(c,_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system,c):
   ANDROID_PLATS = [
     'KitKat',
     'Cupcake',
@@ -109,7 +116,7 @@ def __sort__(_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system):
   ]
   if _start_client_with_system in ANDROID_PLATS:
     # This will start the client as long as the System being ran is truthy
-    client = CREATE_CLIENT(_type_,_mode_,_client_id_,_port_,__key_)
+    client = CREATE_CLIENT(c,_type_,_mode_,_client_id_,_port_,__key_)
     client.__client_starter__()
     return "Client Value Started With Status", 1078
   else:
