@@ -113,7 +113,7 @@ class CREATE_CLIENT:
         # This too shouldn't be a problem
         pass
       break
-def __sort__(c,_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system,c):
+def __sort__(c,_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system):
   ANDROID_PLATS = [
     'KitKat',
     'Cupcake',
