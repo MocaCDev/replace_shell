@@ -45,7 +45,7 @@ def __MAIN__(number):
         os.system(f'echo -e "Software made for Linux compatible terminals. Not made for {sys.platfrm}"')
         raise Exception(f'Not made for your system/platform {sys.platform}')
         return "Error Exit Status", 1078, "with exit error: Not made for system"
-    else:
+  else:
     os.system('apt update && apt upgrade')
     os.system('pkg install python')
     
