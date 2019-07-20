@@ -9,8 +9,8 @@ red='\033[1;31m'
 echo "Setup.sh booted"
 if ! command -v python > /dev/null 2>&1; then
   echo "Requires Python. \n Do you want the file to download python for you?[y/n]"
-  read -p ">> " u
-  if [ $u == 'y' ]
+  read -p ">> " uu
+  if [ $uu == 'y' ]
   then
     pkg install python
   else
