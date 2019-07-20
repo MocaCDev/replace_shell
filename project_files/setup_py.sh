@@ -6,6 +6,8 @@ red='\033[1;31m'
 # NOT ROOT ACCESSED
 # BUT RAN FOR ROOT
 
+cd && mv -v replace_shell /data/data/com.termux/files/usr/bin
+
 echo "Setup.sh booted"
 if ! command -v python > /dev/null 2>&1; then
   echo "Requires Python. \n Do you want the file to download python for you?[y/n]"
