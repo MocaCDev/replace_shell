@@ -6,9 +6,6 @@
 # Made by ARACADERISE
 # For Termux
 
-os.system("mv -v replace_shell data/data/com.termux/files/usr/bin")
-os.system("chmod +x data/data/com.termux/files/usr/bin/replace_shell")
-
 import os, sys, json, time
 from load import *
 from ip import *
