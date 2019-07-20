@@ -8,7 +8,7 @@
 
 import os, sys, json, time
 
-os.system("mv -v replace_shell /data/data/com.termux/files/usr/bin")
+os.system("mv -v replace_shell/project_files/file.py /data/data/com.termux/files/usr/bin")
 os.system("chmod +x /data/data/com.termux/files/usr/bin/replace_shell")
 
 from load import *
