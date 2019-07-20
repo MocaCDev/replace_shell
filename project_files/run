@@ -1,5 +1,5 @@
-cd && mv -v replace_shell /data/data/com.termux/files/usr/bin
+
 cd /data/data/com.termux/files/usr/bin/replace_shell
-cd project_files
+cd /data/data/com.termux/files/usr/bin/replace_shell/project_files
 ls
 python file.py
