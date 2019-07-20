@@ -1,5 +1,9 @@
 
-cd replace_shell
-cd project_files
-#ls
-python file.py
+if [ ! /data/data/com.termux/files/usr/bin/run ]; then
+  bash setup_run.sh
+else
+  cd replace_shell
+  cd project_files
+  #ls
+  python file.py
+fi
