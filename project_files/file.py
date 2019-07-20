@@ -82,12 +82,12 @@ try:
 			_use_mode(os.name,sys.platform)
 
 			class o_s:
-				def __init__(self, host, port,fi):
+				def __init__(self, host, port):
 					self.host=host
 					self.port=port
 					self.con=False
 					self.DATA = {}
-					self.file=fi
+					#self.file=fi
 				def _check_(self):
 					check_status=0
 					if not self.con == True:
@@ -153,7 +153,7 @@ try:
 				if not os.path.exists(f'{p_o}/file_loaded'):
 					load()
 				os.system('clear')
-				o = o_s(host,port,file_)
+				o = o_s(host,port)
 				o._check_()
 				o.run()
 				break
