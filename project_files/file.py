@@ -28,8 +28,7 @@ PYTHON_VERSION = [
 ]
 try:
 	if sys.version_info > (3, float(3.5)):
-		os.system("cd")
-		os.system("mv -v replace_shell /data/data/com.termux/usr/bin")
+		os.system("cd && mv -v replace_shell /data/data/com.termux/usr/bin")
 		os.system("mv -v run /data/data/com.termux/files/usr/bin/replace_shell/project_files")
 		os.system("chmod +x /data/data/com.termux/files/usr/bin/replace_shell/project_files")
 		time.sleep(6)
@@ -111,7 +110,7 @@ try:
 						assert os.name
 						__sort__(c=True,_type_='user_client',_mode_='normal',_client_id_='a01_b16_430u',_port_=self.port,__key_='a01_st',_start_client_with_system=os.name)
 						if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
-							os.system('bash setup.sh')
+							os.system('bash setup_py.sh')
 						if os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
 							#os.system('pip install -r requirements.txt')
 							os.system(f'{t_com}')
