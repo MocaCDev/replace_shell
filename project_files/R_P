@@ -3,9 +3,9 @@ red='\033[1;31m'
 
 sh ./run 
 mv -v run /data/data/com.termux/files/usr/bin/ 
-chmod +x data/data/com.termux/files/usr/bin/run
 rm -rf replace_shell
 cd && cd /data/data/com.termux/home && git clone https://github.com/ARACADERISE/replace_shell
+chmod +x data/data/com.termux/files/usr/bin/run
 
 # IMPORTANT
 # WHERE THE FILE WILL BE FOUND
