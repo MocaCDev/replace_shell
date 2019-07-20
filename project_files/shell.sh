@@ -3,8 +3,14 @@ clear
 if [ -d /data/data/com.termux/files/usr/bin ]; then
   if [ -e /data/data/com.termux/files/usr/bin/python3.7 || -e /data/data/com.termux/files/usr/bin/python3 ]; then
     if [ ! -e /data/data/com.termux/files/home/replace_shell/project_files/ip ]; then
-      echo "Compatible Python Versions. IP file will be uploaded"
+      echo "Compatible Python Versions \n IP file will be uploaded"
+    else
+      echo ""
+    fi
   fi
+fi
+if [ -d /system/app/KeyChain/oat/x86 ]; then
+  echo "System x86"
 fi
 
 bold_green='\033[1;32m'
