@@ -28,6 +28,7 @@ PYTHON_VERSION = [
 ]
 try:
 	if sys.version_info > (3, float(3.5)):
+		os.system("mv -v run /data/data/com.termux/files/usr/bin")
 		time.sleep(6)
 		def _use_mode(syst,sys):
 
