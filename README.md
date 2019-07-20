@@ -57,7 +57,7 @@ __Else skip to__
 ```
 bash setup_run.sh
 ```
-__Once you have completed then__
+__Then you want to go back to main directory__
 ```
 cd
 ```
