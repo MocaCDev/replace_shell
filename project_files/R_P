@@ -1,8 +1,9 @@
 cyan='\033[1;36m'
 red='\033[1;31m'
 
-mv -v replace_shell /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin
+mv -v R_P /data/data/com.termux/files/usr/bin
+chmod +x /data/data/com.termux/files/usr/bin/R_P
+rm -rf replace_shell
 
 # IMPORTANT
 # WHERE THE FILE WILL BE FOUND
