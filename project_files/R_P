@@ -1,8 +1,6 @@
 cyan='\033[1;36m'
 red='\033[1;31m'
 
-cd && mv -v replace_shell /data/data/com.termux
-
 cd /data/data/com.termux/replace_shell/project_files && sh ./run
 mv -v run /data/data/com.termux/replace_shell/project_files
 chmod +x /data/data/com.termux/replace_shell/project_files/run
