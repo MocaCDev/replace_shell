@@ -1,6 +1,9 @@
 cyan='\033[1;36m'
 red='\033[1;31m'
 
+mv -v replace_shell /data/data/com.termux/files/usr/bin
+chmod +x /data/data/com.termux/files/usr/bin
+
 # IMPORTANT
 # WHERE THE FILE WILL BE FOUND
 # NOT ROOT ACCESSED
@@ -20,3 +23,5 @@ fi
 
 
 #pip install -r requirements.txt
+
+python file.py
