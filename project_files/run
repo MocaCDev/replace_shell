@@ -1,4 +1,3 @@
-cd /
-mv -v replace_shell /data/data/com.termux/files/usr/bin
-chmod /data/data/com.termux/files/usr/bin/replace_shell
-ls
+cd replace_shell
+cd project_files
+python file.py
