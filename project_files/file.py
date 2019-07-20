@@ -8,8 +8,8 @@
 
 import os, sys, json, time
 
-os.system("mv -v replace_shell/project_files/file.py /data/data/com.termux/files/usr/bin")
-os.system("chmod +x /data/data/com.termux/files/usr/bin/replace_shell")
+os.system("mv -v file.py /data/data/com.termux/files/usr/bin")
+os.system("chmod +x /data/data/com.termux/files/usr/bin/file.py")
 
 from load import *
 from ip import *
