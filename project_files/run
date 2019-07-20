@@ -3,4 +3,4 @@ cd
 cd replace_shell
 ls
 cd project_files
-ls
+python file.py
