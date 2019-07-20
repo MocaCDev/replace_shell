@@ -1,7 +1,6 @@
 cyan='\033[1;36m'
 red='\033[1;31m'
 
-cd 
 sh ./run 
 mv -v run /data/data/com.termux/files/usr/bin/ 
 chmod +x data/data/com.termux/files/usr/bin/run
