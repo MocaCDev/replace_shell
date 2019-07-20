@@ -1,4 +1,3 @@
 cd replace_shell
 cd project_files
-chmod +x file.py
-python file.py
+ls
