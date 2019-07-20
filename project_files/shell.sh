@@ -13,6 +13,9 @@ if [ -d /system/app/KeyChain/oat/x86 ]; then
   echo "System x86"
   # CLEAR ALL STATUS
   clear
+else
+  # will just clear all status 
+  clear
 fi
 
 bold_green='\033[1;32m'
@@ -31,7 +34,7 @@ ask()
 {
   t=$true
   echo -e "$bold_green"
-  read -p "——► " shell
+  read -p "#> " shell
   if [ $shell == 'h' ]
   then
     show
@@ -157,10 +160,10 @@ ask()
     ask
   elif [ $shell == 'e' ]
   then
-    echo -e "——►Come back again!"
+    echo -e "#> Come back again!"
     exit
   else
-    echo -e "——► That feature has not yet been added"
+    echo -e "#> That feature has not yet been added"
     ask
   fi
 }
