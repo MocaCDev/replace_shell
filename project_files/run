@@ -1,3 +1,2 @@
-cd replace_shell && cd project_files
-python file.py
-cd /
+cd
+ls
