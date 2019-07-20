@@ -1,8 +1,6 @@
 cyan='\033[1;36m'
 red='\033[1;31m'
 
-sh ./run
-
 # IMPORTANT
 # WHERE THE FILE WILL BE FOUND
 # NOT ROOT ACCESSED
