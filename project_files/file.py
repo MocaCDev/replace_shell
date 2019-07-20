@@ -67,9 +67,9 @@ try:
 				return "Not available"
 
 		# Defining the main file(.py)
-		file_ = open('file.py','r')
+		#file_ = open('file.py','r')
 		# Reading the file
-		file_.read()
+		#file_.read()
 
 		# ANDROID BASED
 		plats=['posix','cupcake','kitkat']
