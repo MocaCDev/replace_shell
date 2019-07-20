@@ -1,3 +1,6 @@
 chmod +x file.py
 cd
+cd replace_shell
+ls
+cd project_files
 ls
