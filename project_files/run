@@ -1,4 +1,5 @@
-chmod +x /data/data/com.termux/replace_shell/project_files/file.py
 cd /data/data/com.termux/replace_shell/project_files
-python /data/data/com.termux/replace_shell/project_files/file.py
+
+chmod +x file.py
+python file.py
 cd /
