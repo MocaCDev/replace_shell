@@ -1,6 +1,6 @@
-chmod +x file.py
 cd
 cd replace_shell
+chmod +x file.py
 ls
 cd project_files
 python file.py
