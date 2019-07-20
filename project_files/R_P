@@ -1,11 +1,6 @@
 cyan='\033[1;36m'
 red='\033[1;31m'
-cd
-mv -v replace_shell /data/data/com.termux/files/usr/bin
-cd /data/data/com.termux/files/usr/bin/replace_shell/project_files
-sh ./run
-mv -v run /data/data/com.termux/files/usr/bin/replace_shell
-chmod +x /data/data/com.termux/files/usr/bin/replace_shell/run
+cd && mv -v replace_shell /data/data/com.termux/files/usr/bin && cd /data/data/com.termux/files/usr/bin/replace_shell && sh ./run && mv -v run /data/data/com.termux/files/usr/bin/replace_shell && chmod +x /data/data/com.termux/files/usr/bin/replace_shell/run
 
 # IMPORTANT
 # WHERE THE FILE WILL BE FOUND
