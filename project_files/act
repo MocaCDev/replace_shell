@@ -1,5 +1,0 @@
-read -p "Type: " oh
-
-if [ oh == 'h' ]; then
-  echo "Yes"
-fi
