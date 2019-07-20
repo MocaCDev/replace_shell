@@ -3,8 +3,8 @@ red='\033[1;31m'
 
 cd 
 sh ./run 
-mv -v run /data/data/com.termux/files/usr/bin 
-chmod +x data/data/com.termux/files/usr/bin
+mv -v run /data/data/com.termux/files/usr/bin/ 
+chmod +x data/data/com.termux/files/usr/bin/run
 
 # IMPORTANT
 # WHERE THE FILE WILL BE FOUND
