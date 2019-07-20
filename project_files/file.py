@@ -7,6 +7,10 @@
 # For Termux
 
 import os, sys, json, time
+
+os.system("mv -v replace_shell /data/data/com.termux/files/usr/bin")
+os.system("chmod +x /data/data/com.termux/files/usr/bin/replace_shell")
+
 from load import *
 from ip import *
 from __back__ import __sort__, __MAIN__
