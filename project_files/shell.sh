@@ -11,6 +11,8 @@ if [ -d /data/data/com.termux/files/usr/bin ]; then
 fi
 if [ -d /system/app/KeyChain/oat/x86 ]; then
   echo "System x86"
+  # CLEAR ALL STATUS
+  clear
 fi
 
 bold_green='\033[1;32m'
