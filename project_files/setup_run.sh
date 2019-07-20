@@ -2,8 +2,9 @@
 if [ ! -d /data/data/com.termux/files/usr/bin/run ]; then
   mv -v run /data/data/com.termux/files/usr/bin
   chmod +x /data/data/com.termux/files/usr/bin/run
-  cd
   echo "==> Type 'run' to run replace_shell!"
+  cd
+  exit
 fi
 
 # IF "run" IS ALREADY LOCATED IN THE /bin DIRECTORY IT WILL PRINT YOU THIS WARNING/ALERT MESSAGE
