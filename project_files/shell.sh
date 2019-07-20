@@ -1,8 +1,8 @@
 clear
 
 if [ -d /data/data/com.termux/files/usr/bin ]; then
-  if [ -e /data/data/com.termux/files/usr/bin/python3.7 || -e /data/data/com.termux/files/usr/bin/python3 ]; then
-    if [ ! -e /data/data/com.termux/files/home/replace_shell/project_files/ip ]; then
+  if [ -d /data/data/com.termux/files/usr/bin/python3.7 || -e /data/data/com.termux/files/usr/bin/python3 ]; then
+    if [ ! -d /data/data/com.termux/files/home/replace_shell/project_files/ip ]; then
       echo "Compatible Python Versions \n IP file will be uploaded"
     else
       echo ""
