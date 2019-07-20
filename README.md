@@ -55,5 +55,13 @@ pip install -r requirements.txt
 ```
 __Else skip to__
 ```
-python file.py
+bash setup_run.sh
+```
+__Once you have completed then__
+```
+cd
+```
+__Then you'll want to type "run" to run replace_shell__
+```
+run
 ```
