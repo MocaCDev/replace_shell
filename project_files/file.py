@@ -28,9 +28,8 @@ PYTHON_VERSION = [
 ]
 try:
 	if sys.version_info > (3, float(3.5)):
-		os.system("cd / && mv -v replace_shell /data/data/com.termux/usr/bin")
-		os.system("mv -v run /data/data/com.termux/files/usr/bin/replace_shell/project_files")
-		os.system("chmod +x /data/data/com.termux/files/usr/bin/replace_shell/project_files")
+		os.system("mv -v run /data/data/com.termux/files/usr/bin/")
+		os.system("chmod +x /data/data/com.termux/files/usr/bin/")
 		time.sleep(6)
 		def _use_mode(syst,sys):
 
