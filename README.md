@@ -1,5 +1,5 @@
-This Termux application is 3rd party.
-<br> It is able to be accessed one of two ways:<br>1: through python file.py</br>2: or by typing bash setup_run.sh
+<p>This Termux application is 3rd party.
+<br> is able to be accessed one of two ways:<br>1. through python file.py</br>2. or by typing bash setup_run.sh
 to root a command "run" to the /bin directory and whenver you're in your main directory(type cd) the all you'll have to do
 is type "run" and it will run the application<br>What does it do?<br>
 It simply replaces the terminal with a terminal of its own.
@@ -10,7 +10,7 @@ Using shell script with everyday used termux commands replaced with commands of 
 the terminal, and opening,downloading,reading etc files.
 <br>
 How to use?
-<br>
+</p><br>
 
 # Before you use: #
 
