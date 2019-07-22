@@ -1,3 +1,5 @@
+# This Python script file simply just checks to see if the
+# Port and Host has a certain length
 import time
 from colorama import Fore, Style
 class check:
