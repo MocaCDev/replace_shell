@@ -119,6 +119,8 @@ try:
 
 					while not self.con == True:
 						assert os.name in plats
+						# Mode is normal for reasons of mainly..I haven't even
+						# Made a pythons script file for different modes :)
 						__sort__(c=True,_type_='user_client',_mode_='normal',_client_id_='a01_b16_430u',_port_=self.port,__key_='a01_st',_start_client_with_system=os.name)
 						if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
 							os.system('bash setup_py.sh')
