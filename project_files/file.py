@@ -194,7 +194,7 @@ finally:
 				'/data/data/com.termux/files/usr/lib',
 				{'FOR':'python3.7 will be located in that directory'},
 				'/data/data/com.termux/files/usr/include',
-				{'FOR':'python3.7m will be located in that directory}
+				{'FOR':'python3.7m will be located in that directory'}
 			],
 			'Short_Description': 'Boot your terminal into a easier terminal script that replaces the terminal commands with shorter and easier commands',
 		}
