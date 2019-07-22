@@ -1,5 +1,12 @@
-import os,sys,json
 # "BACKEND" SECTION
+# This python script will start a client
+# As of right now I have not made it to where the client does anything, right now
+# all I have it do is give your device a client-id and startup_information given with your compatible
+# android system / platform
+# Updates will com frequently. I hope on this driving the application to become much better
+# In ways such as holding user info, holding certain data, following the user throughout the application
+# having a run time, just being "live" throughout the progress of the application running etc
+import os,sys,json
 
 CLIENT_TYPE=''
 CLIENTIN = object
