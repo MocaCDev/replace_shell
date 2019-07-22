@@ -1,4 +1,4 @@
-import os,sys
+import os,sys,json
 # "BACKEND" SECTION
 
 CLIENT_TYPE=''
@@ -20,25 +20,25 @@ def __MAIN__(number):
   # This will steer clear of any possible(80%) issues within the future of replace_shell
   if os.path.exists('/data/data/com.termux/files/usr/lib/python3.7'):
     assert os.name and sys.platform
-    if number == 1 and os.name == 'posix':
+    if number == 1 and os.name == 'posix' and if sys.platform('linux'):
       CLIENT_PRODUCT_ID = 'a01_posix'
-      return _start_client_posix, CLIENT_PRODUCT_ID
-    if number == 2 and os.name == 'KitKat':
+      return _start_client_posix, CLIENT_PRODUCT_ID, _start_client_in_linux
+    if number == 2 and os.name == 'KitKat' and if sys.platform('linux'):
       CLIENT_PRODUCT_ID = 'a01_KitKat_vyt'
-      return _start_client_KitKat, CLIENT_PRODUCT_ID
-    if number == 3 and os.name == 'Cupcake':
+      return _start_client_KitKat, CLIENT_PRODUCT_ID, _start_client_in_linux
+    if number == 3 and os.name == 'Cupcake' and if sys.platform('linux'):
       CLIENT_PRODUCT_ID = 'a01_Cupcake_vytr'
-      return _start_client_Cupcake, CLIENT_PRODUCT_ID
-    if number == 4 and os.name == 'Pie':
+      return _start_client_Cupcake, CLIENT_PRODUCT_ID, _start_client_in_linux
+    if number == 4 and os.name == 'Pie' and if sys.platform('linux'):
       CLIENT_PRODUCT_ID = 'a01_Pie_pytr'
-      return _start_client_Pie, CLIENT_PRODUCT_ID
-    if number == 5 and os.name == 'Oreo':
+      return _start_client_Pie, CLIENT_PRODUCT_ID, _start_client_in_linux
+    if number == 5 and os.name == 'Oreo' and if sys.platform('linux'):
       CLIENT_PRODUCT_ID = 'a01_Oreo_ottr'
-      return _start_client_Oreo, CLIENT_PRODUCT_ID
+      return _start_client_Oreo, CLIENT_PRODUCT_ID, _start_client_in_linux
     
     # THE PROGRAM/CLIENT IS ONLY MADE FOR LINUX
     if number == 1 or 2 or 3 or 4 or 5 and sys.platform == 'linux':
-      return _start_client_in_linux, 'cd /data/data/com.termux/home'
+      return _start_client_in_linux
     else:
       # THIS WILL RETURN A ERROR AND STOP THE PROGRAM WITH A EXCEPTION
       if not 'posix' or 'KitKat' or 'Cupcake' or 'Oreo' in os.name and not 'linux' in sys.platform:
@@ -48,17 +48,59 @@ def __MAIN__(number):
   else:
     os.system('apt update && apt upgrade')
     os.system('pkg install python')
+
+def _client_(type_,client):
+  to_format_into_json = {'Device_Type':type_,'Device_Client':client}
+  with open('client.json', 'w') as c_j:
+    json.dump(to_format_into_json, c_j, indent=2, sort_keys=True)
+  return "Client uploaded to .json file with exit status",1078
     
 def _check_name_(name,r_f_t_o,c_startup,s_client,s_syss):
   if name == 'posix':
     while r_f_t_o:
       c_startup = f'a01-{name}/{__MAIN__(1)}c_c_'
+      _client_(name,c_startup)
       if r_f_t_o == True:
         r_f_t_o = False
         break
       return c_startup, s_client, s_syss
     return "Client bootup done with exit status",1078
-  
+  if name == 'KitKat':
+    while r_f_t_o:
+      c_startup = f'a01-{name}/{__MAIN__(2)}k_k'
+      _client_(name,c_startup)
+      if r_f_t_o == True:
+        r_f_t_o = False
+        break
+      return c_startup, s_client, s_syss
+    return "Client bootup done with exit status",1078
+  if name == 'Cupcake':
+    while r_f_t_o:
+      c_startup = f'a01-{name}/{__MAIN__(3)}cup_c'
+      _client_(name,c_startup)
+      if r_f_t_o == True:
+        r_f_t_o = False
+        break
+      return c_startup, s_client, s_syss
+    return "Client bootup done with exit status",1078
+  if name == 'Pie':
+    while r_f_t_o:
+      c_startup = f'a01-{name}/{__MAIN__(4)}P_i'
+      _client_(name,c_startup)
+      if r_f_t_o == True:
+        r_f_t_o = False
+        break
+      return c_startup, s_client, s_syss
+    return "Client bootup done with exit status",1078
+  if name == 'Oreo':
+    while r_f_t_o:
+      c_startup = f'a01-{name}/{__MAIN__(5)}O_e'
+      _client_(name,c_startup)
+      if r_f_t_o == True:
+        r_f_t_o = False
+        break
+      return c_startup, s_client, s_syss
+    return "Client bootup done with exit status",1078
 
 class CREATE_CLIENT:
   def __init__(self,con,__type__,__mode__,__client_id__,__port__,__key__):
@@ -108,13 +150,15 @@ class CREATE_CLIENT:
               return "Failed to setup client with exit status",1078
           else:
             # This shouldn't be a problem. The path /data/data/com.termux/files/usr/share/doc should exists in everyones Termux
-            pass
+            # but if it doesn't we will raise a exception
+            raise Exception('There was a error finding the directory /data/data/com.termux/files/usr/doc')
         else:
           # This shouldn't even be a problem
           pass
       else:
         # This too shouldn't be a problem
-        pass
+        # But in case it is, due to users using a uncompatible android system/platform we will raise a exception
+        raise Exception('Your system does not support the scripts directory files needed. Hopefully someday the script will be compatible')
       break
 def __sort__(c,_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system):
   ANDROID_PLATS = [
@@ -129,6 +173,10 @@ def __sort__(c,_type_,_mode_,_client_id_,_port_,__key_,_start_client_with_system
     # This will start the client as long as the System being ran is truthy
     client = CREATE_CLIENT(c,_type_,_mode_,_client_id_,_port_,__key_)
     client.__client_starter__()
+    # We want to move it to the system directory
+    os.system('mv -v __back__.py /system/bin')
+    # Then we want to chmod it so it can still be accessed
+    os.system('chmod +x /system/bin/__back__.py')
     return "Client Value Started With Status", 1078
   else:
     raise Exception('Client does not start on System/Platform',_start_client_with_system)
