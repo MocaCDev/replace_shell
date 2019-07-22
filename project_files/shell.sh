@@ -20,15 +20,16 @@ fi
 
 bold_green='\033[1;32m'
 bold_blue='\033[1;34m'
-i_blue='\033[0;94m'
+i_green='\033[1;92m'
+i_blue='\033[1;94m'
 
 echo -e "$bold_green"
 
 show()
 {
-echo -e "List of replace_shell commands:\n$iblue --{ h for help\n$i_blue --{ c for cd & ls\n$i_blue --{ c- as cd FILE_NAME | Also does ls\n$i_blue --{ p for pkg\n$i_blue --{ a for apt\n$i_blue --{ py for python\n$i_blue --{ php\n$i_blue --{ b for bash\n$i_blue --{ g for git\n$i_blue --{ w for wget\n
-$i_blue --{ t-o for termux-open\n$i_blue --{ cat\n$i_blue --{ p.2 for python2\n$i_blue --{ cl for clear\n$i_blue --{ r f for rm -rf File_Being_Closed\n\n$bold_blueExtra\n\n $bold_green
-$i_blue --{ i for import..file.py==python_code_here\n!THERE IS ONLY ONE FILE THIS FILE CAN WRITE TO!\ne for exit"
+echo -e "List of replace_shell commands:\n$i_blue --{ h } $i_green for help\n$i_blue --{ c } $i_green for cd & ls\n$i_blue --{ c- } $i_green to cd into directory(DO NOT ADD THE DIRECTORY AFTER c-, Just press enter) | Also does ls\n$i_blue --{ p } $i_green for pkg\n$i_blue --{ a } $i_green for apt\n$i_blue --{ py } $i_green for python\n$i_blue --{ php }\n$i_blue --{ b } $i_green for bash\n$i_blue --{ g } $i_green for git\n$i_blue --{ w } $i_green for wget\n
+$i_blue --{ t-o } $i_green for termux-open\n$i_blue --{ cat }\n$i_blue --{ p.2 } $i_green for python2\n$i_blue --{ cl } $i_green for clear\n$i_blue --{ r f } $i_green for rm -rf File_Being_Closed\n\n$bold_blueExtra\n\n $bold_green
+$i_blue --{ i } $i_green for import..file.py==python_code_here\n!THERE IS ONLY ONE FILE THIS FILE CAN WRITE TO!\ne for exit"
 }
 
 ask()
