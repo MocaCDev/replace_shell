@@ -1,5 +1,5 @@
 This Termux application is 3rd party.
-<br> is able to be accessed one of two ways:<br> 
+<br> able to be accessed one of two ways:<br> 
 1. through python file.py
 
 # #
