@@ -30,16 +30,16 @@ def __MAIN__(number):
     if number == 1 and os.name == 'posix' and sys.platform('linux'):
       CLIENT_PRODUCT_ID = 'a01_posix'
       return _start_client_posix, CLIENT_PRODUCT_ID, _start_client_in_linux
-    if number == 2 and os.name == 'KitKat' and if sys.platform('linux'):
+    if number == 2 and os.name == 'KitKat' and sys.platform('linux'):
       CLIENT_PRODUCT_ID = 'a01_KitKat_vyt'
       return _start_client_KitKat, CLIENT_PRODUCT_ID, _start_client_in_linux
-    if number == 3 and os.name == 'Cupcake' and if sys.platform('linux'):
+    if number == 3 and os.name == 'Cupcake' and sys.platform('linux'):
       CLIENT_PRODUCT_ID = 'a01_Cupcake_vytr'
       return _start_client_Cupcake, CLIENT_PRODUCT_ID, _start_client_in_linux
-    if number == 4 and os.name == 'Pie' and if sys.platform('linux'):
+    if number == 4 and os.name == 'Pie' and sys.platform('linux'):
       CLIENT_PRODUCT_ID = 'a01_Pie_pytr'
       return _start_client_Pie, CLIENT_PRODUCT_ID, _start_client_in_linux
-    if number == 5 and os.name == 'Oreo' and if sys.platform('linux'):
+    if number == 5 and os.name == 'Oreo' and sys.platform('linux'):
       CLIENT_PRODUCT_ID = 'a01_Oreo_ottr'
       return _start_client_Oreo, CLIENT_PRODUCT_ID, _start_client_in_linux
     
