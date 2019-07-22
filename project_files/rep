@@ -1,8 +1,19 @@
 
 case "$1" in
   -m)
-    echo "Done"
+    php modules/.tracem.php
   ;;
+  *)
+    echo "Usage: ip-tracer [command]... [arguments]..."
+    echo " Commands:"
+    echo " -t <target_ip>      to trace target ip."
+    echo " -m                  to trace your own ip."
+    echo " -h                  to show help."
+    echo " -u                  to update ip-tracer."
+    echo " help                to show help."
+    echo " update              to update ip-tracer."
+    echo " start               to start ip-tracer menu."
+esac
 
 cd replace_shell
 cd project_files
