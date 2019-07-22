@@ -9,14 +9,14 @@ python file.py
 
 2. or by typing <br> 
 ```shell 
-bash setup_run.sh
+bash set.sh
 ```
 to root a command <br> 
 ```shell 
-run
+rep
 ```
 to the __/bin directory__ and whenver you're in your main directory(type ```cd```) then all you'll have to do
-is type ```run``` and it will run the application<br>What does it do?<br>
+is type ```rep``` and it will run the application<br>What does it do?<br>
 It simply replaces the terminal with a terminal of its own.
 <br>
 How?
@@ -72,7 +72,7 @@ pip install -r requirements.txt
 ```
 __Else skip to__
 ```
-bash setup_run.sh
+bash set.sh
 ```
 __Then you want to go back to main directory__
 ```
@@ -80,5 +80,5 @@ cd
 ```
 __Then you'll want to type "run" to run replace_shell__
 ```
-run
+rep
 ```
