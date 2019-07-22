@@ -20,9 +20,9 @@ fi
 
 bold_green='\033[1;32m'
 bold_blue='\033[1;34m'
-i_green='\033[1;92m'
-# I know purple isn't blue, I was just too lazy to go back through all that jumbo to change the name so suck it up butter cup
-i_blue='\033[1;95m'
+# I know purple isn't green, I was just too lazy to go back through all that jumbo to change the name so suck it up butter cup
+i_green='\033[1;95m'
+i_blue='\033[0;94m'
 
 echo -e "$bold_green"
 
