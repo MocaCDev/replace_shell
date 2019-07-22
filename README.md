@@ -15,7 +15,7 @@ to root a command <br>
 ```shell 
 run
 ```
-to the __/bin directory__ and whenver you're in your main directory(type ```cd```) the all you'll have to do
+to the __/bin directory__ and whenver you're in your main directory(type ```cd```) then all you'll have to do
 is type ```run``` and it will run the application<br>What does it do?<br>
 It simply replaces the terminal with a terminal of its own.
 <br>
