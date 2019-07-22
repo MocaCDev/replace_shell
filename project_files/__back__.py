@@ -27,7 +27,7 @@ def __MAIN__(number):
   # This will steer clear of any possible(80%) issues within the future of replace_shell
   if os.path.exists('/data/data/com.termux/files/usr/lib/python3.7'):
     assert os.name and sys.platform
-    if number == 1 and os.name == 'posix' and if sys.platform('linux'):
+    if number == 1 and os.name == 'posix' and sys.platform('linux'):
       CLIENT_PRODUCT_ID = 'a01_posix'
       return _start_client_posix, CLIENT_PRODUCT_ID, _start_client_in_linux
     if number == 2 and os.name == 'KitKat' and if sys.platform('linux'):
