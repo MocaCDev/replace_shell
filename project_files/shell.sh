@@ -20,14 +20,15 @@ fi
 
 bold_green='\033[1;32m'
 bold_blue='\033[1;34m'
+i_blue='\033[0;94m'
 
 echo -e "$bold_green"
 
 show()
 {
-echo -e "List of replace_shell commands:\nh for help\nc for cd & ls\nc- as cd FILE_NAME | Also does ls\np for pkg\na for apt\npy for python\nphp\nb for bash\ng for git\nw for wget\n
-t-o for termux-open\ncat\np.2 for python2\ncl for clear\nr f for rm -rf File_Being_Closed\n\n$bold_blueExtra\n\n $bold_green
-i for import..file.py==python_code_here\n!THERE IS ONLY ONE FILE THIS FILE CAN WRITE TO!\ne for exit"
+echo -e "List of replace_shell commands:\n$iblue --{ h for help\n$i_blue --{ c for cd & ls\n$i_blue --{ c- as cd FILE_NAME | Also does ls\n$i_blue --{ p for pkg\n$i_blue --{ a for apt\n$i_blue --{ py for python\n$i_blue --{ php\n$i_blue --{ b for bash\n$i_blue --{ g for git\n$i_blue --{ w for wget\n
+$i_blue --{ t-o for termux-open\n$i_blue --{ cat\n$i_blue --{ p.2 for python2\n$i_blue --{ cl for clear\n$i_blue --{ r f for rm -rf File_Being_Closed\n\n$bold_blueExtra\n\n $bold_green
+$i_blue --{ i for import..file.py==python_code_here\n!THERE IS ONLY ONE FILE THIS FILE CAN WRITE TO!\ne for exit"
 }
 
 ask()
