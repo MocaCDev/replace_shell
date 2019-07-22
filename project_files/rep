@@ -1,16 +1,4 @@
-case "$1" in
-  -p)
-    cd replace_shell
-    cd project_files
-    #ls
-    python file.py
-  ;;
-  -b shell)
-    cd replace_shell
-    cd project_files
-    # ls
-    bash shell.sh
-  ;;
-  *)
-  echo "\n\n--{ Type rep -p to boot file.py\n--{ Type -b .sh file name to boot the .sh file you want(ex rep -b shell)\n\n"
-esac
+cd replace_shell
+cd project_files
+#ls
+python file.py
