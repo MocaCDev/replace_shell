@@ -3,8 +3,6 @@ This Termux application is 3rd party.
 1. through python file.py
 
 # #
-</br>
-# #
 
 2. or by typing bash setup_run.sh
 to root a command "run" to the /bin directory and whenver you're in your main directory(type cd) the all you'll have to do
