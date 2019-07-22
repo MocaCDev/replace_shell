@@ -1,4 +1,9 @@
 
+case "$1" in
+  -m)
+    echo "Done"
+  ;;
+
 cd replace_shell
 cd project_files
 #ls
