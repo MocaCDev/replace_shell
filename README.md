@@ -15,7 +15,7 @@ to root a command <br>
 ```shell 
 rep
 ```
-to the __/bin directory__ and whenver you're in your main directory(type ```cd```) then all you'll have to do
+<p>to the __/bin directory__ and whenver you're in your main directory(type ```cd```) then all you'll have to do
 is type ```rep``` and it will run the application<br>What does it do?<br>
 It simply replaces the terminal with a terminal of its own.
 <br>
@@ -24,7 +24,7 @@ How?
 Using shell script with everyday used termux commands replaced with commands of its own to help you navigate your way through
 the terminal, and opening,downloading,reading etc files.
 <br>
-How to use?
+How to use?</p>
 <br>
 
 # Before you use: #
