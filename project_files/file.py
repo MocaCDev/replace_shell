@@ -48,25 +48,37 @@ try:
 			if syst == 'posix':
 				print('Platform Used:',syst)
 				def posix():
-					return "Using platform posix"
+					return "Using Android platform posix"
 				posix()
 				return _write_(syst)
-			if syst == 'cupcake':
+			if syst == 'Cupcake':
 				print('Platform Used:',syst)
 				def Cupcake():
-					return "Using platform Cupcake"
+					return "Using Android platform Cupcake"
 				Cupcake()
 				return _write_(syst)
-			if syst == 'kitkat':
+			if syst == 'KitKat':
 				print('Platform Used:',syst)
 				def KitKat():
-					return "Using platform KitKat"
+					return "Using Android platform KitKat"
 				KitKat()
 				return _write_(syst)
+			if syst == 'Pie':
+				print('Platform Used:',syst)
+				def Pie():
+					return "Using Android platform Pie"
+				Pie()
+				return _write_(syst)
+			if syst == 'Oreo':
+				print('Platform Used:',syst)
+				def Oreo():
+					return "Using Anroid Platform Oreo"
+				Oreo()
+				return _write_(syst)
 			if syst or sys == 'ubuntu':
-				return "Not available"
+				return "Not available for ubuntu"
 			if syst or sys == 'debian':
-				return "Not available"
+				return "Not available for debian"
 
 		# Defining the main file(.py)
 		#file_ = open('file.py','r')
@@ -74,7 +86,7 @@ try:
 		#file_.read()
 
 		# ANDROID BASED
-		plats=['posix','cupcake','kitkat']
+		plats=['posix','Cupcake','KitKat','Pie','Oero']
 		if plats[0] or plats[1] or plats[2] in os.name:
 			pass
 		# LINUX SHOULD BE RAN ON ANDROID
@@ -105,8 +117,8 @@ try:
 					
 					print('Running with host:', self.host,'\nAnd port:',self.port)
 
-					while not os.name == False:
-						assert os.name
+					while not self.con == True:
+						assert os.name in plats
 						__sort__(c=True,_type_='user_client',_mode_='normal',_client_id_='a01_b16_430u',_port_=self.port,__key_='a01_st',_start_client_with_system=os.name)
 						if not os.path.exists(f'/data/data/com.termux/files/usr/lib/python{PYTHON_VERSION[0]}'):
 							os.system('bash setup_py.sh')
@@ -120,8 +132,10 @@ try:
 							os.system('bash shell.sh')
 						else:
 							_err_(1,'You do not have python 3.7(the version of python this application uses) installed @ /data/data/com.termux/files/usr/include. Please install Python')
-						break
-					return self.host, self.port
+						if self.con is not True:
+							self.con = True
+							break
+					return self.host, self.port, self.con, "Boot done with exit status",1078
 
 			# this is where shell.sh writes into the file
 			# write = os.system('sh shell.sh')
@@ -166,4 +180,25 @@ try:
 except KeyboardInterrupt or KeyError:
 	raise _err_(8,'Key error')
 finally:
-	pass
+	# Short handedly writing a dictionary to transform into json for a json formatted view of
+	# the load data(or just basic data)
+	# No point, just fun to add some data stuff
+	def _data_():
+		finalized_data = {
+			'LOAD': True,
+			'Application': 'Replace_Shell',
+			'TYPE': 'Python',
+			'Python_Compatibility': ['3.5','3.6','3.7'],
+			'Originially_For': 'Python3.7',
+			'Directory_Files': [
+				'/data/data/com.termux/files/usr/lib',
+				{'FOR':'python3.7 will be located in that directory'},
+				'/data/data/com.termux/files/usr/include',
+				{'FOR':'python3.7m will be located in that directory}
+			],
+			'Short_Description': 'Boot your terminal into a easier terminal script that replaces the terminal commands with shorter and easier commands',
+		}
+		with open('final_load.json','w') as f_j:
+				json.dump(finalized_data, f_j, indent=2, sort_keys=True)
+		return "Load done with exit status",1078
+	_data_()
