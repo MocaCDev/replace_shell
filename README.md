@@ -54,8 +54,6 @@ __If you see python3.7 you're all set!__
 ### ###
 __If you see python3.7m you're all set!__
 <br>
-__But if you don't then simply__ <br> ```bash setup_py.sh``` <br>
-### ###
 
 # IF you already have python3 installed #
 
@@ -82,3 +80,10 @@ __Then you'll want to type "run" to run replace_shell__
 ```
 rep
 ```
+
+## In case you don't have Python3.7(or a version no lower than Python3.5) then do the following ##
+__NOTE: *You have to do the first 3 steps above in order to bash setup_py.sh*__
+```shell
+bash setup_py.sh
+```
+__Then return to the steps above__
