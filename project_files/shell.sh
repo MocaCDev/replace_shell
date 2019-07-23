@@ -118,7 +118,7 @@ ask()
         {Fore.MAGENTA}=====================================
                       |{Fore.BLUE}INSTALLING              |
         {Fore.MAGENTA}=====================================              
-      """
+      """)
       EOL
       pkg install $p_pkg
     fi
