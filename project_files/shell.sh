@@ -114,7 +114,7 @@ ask()
     else
       echo "$i_green ==================================="
       echo "$i_green |    $i_blue INSTALLING $p_pkg  $i_green |"
-      echo "$i_green ===================================
+      echo "$i_green ==================================="
       pkg install $p_pkg
     fi
     ask
