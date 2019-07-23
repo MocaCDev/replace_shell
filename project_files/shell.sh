@@ -7,7 +7,11 @@ if [ -d /data/data/com.termux/files/usr/bin ]; then
     else
       echo ""
     fi
+  else
+    echo "Python not compatible. Luckily, if you run compatible android systems, you can use this!"
   fi
+else
+  echo "You do not have a compatible termux(android based) system"
 fi
 if [ -d /system/app/KeyChain/oat/x86 ]; then
   echo "System x86"
