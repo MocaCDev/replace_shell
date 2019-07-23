@@ -80,7 +80,7 @@ ask()
     ls
     read -p "Python3(verion 3.5 up) file you want to open >> " p_3_f
     python $p_3_f
-    ask()
+    ask
   elif [ $shell == 'p.2' ]
   then
     cd
@@ -88,7 +88,7 @@ ask()
     cd $p_2_d
     read -p "Pythno2(version 2.5 and up) file you want to open >> " p_2_f
     python2 $p_2_f
-    ask()
+    ask
   elif [ $shell == 'i' ]
   then
     touch file.py
