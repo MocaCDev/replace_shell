@@ -11,5 +11,5 @@ def LOGO():
    #    # ###### #      ###### #    #  ####  {Fore.GREEN}######          ####  #    # ###### ###### ###### 
                                                     #######                    
     """)
-    print(Fore.BLUE+'     --{Made By: ARACADERISE}--     ')
-    print(Fore.BLUE+'     --{Version 1.0.1}--            ')
+  print(Fore.BLUE+'     --{Made By: ARACADERISE}--     ')
+  print(Fore.BLUE+'     --{Version 1.0.1}--            ')
