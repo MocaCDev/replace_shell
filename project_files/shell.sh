@@ -112,10 +112,13 @@ ask()
     then
       pkg update && upgrade
     else
-      echo <<<EOL
-      $i_green  ==========================================
-               $i_green |    $i_blue INSTALLING $p_pkg..        $i_green |
-      $i_green  ==========================================
+      python << EOL
+      from colorama import Fore
+      print(f"""
+        {Fore.MAGENTA}=====================================
+                      |{Fore.BLUE}INSTALLING              |
+        {Fore.MAGENTA}=====================================              
+      """
       EOL
       pkg install $p_pkg
     fi
