@@ -114,7 +114,7 @@ ask()
     else
       echo -e "$i_green \n\n          ===================================="
       echo    "          |                                  |    "
-      echo -e "$i_green |   $i_blue            ~~ INSTALLING $p_pkg \~~$i_green      |"
+      echo -e "$i_green          |   $i_blue            ~~ INSTALLING $p_pkg \~~$i_green     |"
       echo    "          |                                  |    "
       echo -e "$i_green          ====================================\n\n"
       pkg install $p_pkg
