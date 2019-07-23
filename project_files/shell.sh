@@ -112,6 +112,11 @@ ask()
     then
       pkg update && upgrade
     else
+      echo """
+      $i_green  ==========================================
+               $i_green |    $i_blue INSTALLING $p_pkg..        $i_green |
+      $i_green  ==========================================
+      """
       pkg install $p_pkg
     fi
     ask
