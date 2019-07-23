@@ -5,6 +5,19 @@
 import time
 from colorama import Fore, Style
 
+# This is just going to be the Logo, no "Made by" or "Version" underneath
+def PURE_LOGO():
+  print(Style.BRIGHT+f"""
+
+   {Fore.CYAN}#####  ###### #####  #        ##    ####  ######          ####  #    # ###### #      #      
+   #    # #      #    # #       #  #  #    # #              {Fore.BLUE}#      #    # #      #      #      
+   #    # #####  #    # #      #    # #      #####           ####  ###### #####  #      #      
+   #####  #      #####  #      {Fore.RED}###### #      #                   # #    # #      #      #      
+   #   #  #      #      #      #    # #    # #              #    # #    # #      #      #      
+   #    # ###### #      ###### #    #  ####  {Fore.GREEN}######          ####  #    # ###### ###### ###### 
+                                                    #######                    
+    """)
+
 def LOGO():
   print(Style.BRIGHT+f"""
 
