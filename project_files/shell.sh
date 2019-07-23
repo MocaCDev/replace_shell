@@ -214,7 +214,7 @@ ask()
     cd
     read "Link >> " git_link
     git clone $git_link
-    ask()
+    ask
   elif [ $shell == 'c' ]
   then
     cd
@@ -222,7 +222,7 @@ ask()
     cd $cat_dir
     read -p "File you want to cat >> " cat_file
     cat $cat_file
-    ask()
+    ask
   elif [ $shell == 'e' ]
   then
     echo -e "#> Come back again!"
