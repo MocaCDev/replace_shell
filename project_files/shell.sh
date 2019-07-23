@@ -112,10 +112,10 @@ ask()
     then
       pkg update && upgrade
     else
-      echo -e "$i_green \n\n==================================="
-      echo "            |    |!!!!!!!!!!!!!!!!!!!!!!!!!|   |    "
+      echo -e "$i_green \n\n ==================================="
+      echo " |    |!!!!!!!!!!!!!!!!!!!!!!!!!|   |    "
       echo -e "$i_green |   -|$i_blue INSTALLING $p_pkg|-$i_green         |"
-      echo "            |    |¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡|   |    "
+      echo " |    |¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡|   |    "
       echo -e "$i_green ===================================\n\n"
       pkg install $p_pkg
     fi
