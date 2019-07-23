@@ -114,11 +114,12 @@ ask()
     else
       python << EOL
       from colorama import Fore
-      print(f"""
+      print(f'''
         {Fore.MAGENTA}=====================================
                       |{Fore.BLUE}INSTALLING              |
         {Fore.MAGENTA}=====================================              
-      """)
+      ''')
+      
       EOL
       pkg install $p_pkg
     fi
