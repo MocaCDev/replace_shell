@@ -1,4 +1,8 @@
+# This will give the user a ip address
+# Gives buffer time beforehand
+
 import os,time,sys
+from __LOGO__ import PURE_LOGO
 import ipaddress
 from colorama import Fore, Style
 # Sets up ip
@@ -13,41 +17,54 @@ class set_ip:
       print('\n\nGetting IP--[..................]--\n\n')
       time.sleep(1)
       os.system('clear')
+      PURE_LOGO()
       print('\n\nGetting IP--[#.................]--1%\n\n')
       time.sleep(0.4)
       os.system('clear')
+      PURE_LOGO()
       print('\n\nGetting IP--[##.................]--3%\n\n')
       time.sleep(0.7)
       os.system('clear')
+      PURE_LOGO()
       print('\n\nGetting IP--[####...............]--10%\n\n')
       time.sleep(0.2)
       os.system('clear')
+      PURE_LOGO()
       print('\n\nGetting IP--[######.............]--27%\n\n')
       time.sleep(0.9)
       os.system('clear')
+      PURE_LOGO()
       print('\n\nGetting IP--[#########..........]--33%\n\n')
       time.sleep(0.7)
       os.system('clear')
+      PURE_LOGO()
       print('\n\nGetting IP--[##########.........]--42%\n\n')
       time.sleep(0.2)
       os.system('clear')
+      PURE_LOGO()
       print('\n\nGetting IP--[###########........]--51%\n\n')
       time.sleep(0.9)
       os.system('clear')
+      PURE_LOGO()
       print('\n\nGetting IP--[##############.....]--65%\n\n')
       time.sleep(0.4)
       os.system('clear')
+      PURE_LOGO()
       print('\n\nGetting IP--[################...]--78%\n\n')
       time.sleep(1)
       os.system('clear')
+      PURE_LOGO()
       print('\n\nGetting IP--[#################..]--88%\n\n')
       time.sleep(1.4)
       os.system('clear')
+      PURE_LOGO()
       print('\n\nGetting IP--[##################.]--97%\n\n')
       time.sleep(0.6)
       os.system('clear')
+      PURE_LOGO()
       print('\n\nGetting IP--[###################]--100%\n\n')
       os.system('clear')
+      PURE_LOGO()
       self.set_ip = (
         ipaddress.ip_address('147.80.46.18'),
         ipaddress.ip_network('147.80.46.18/24',strict=False)
