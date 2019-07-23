@@ -35,9 +35,19 @@ echo -e "$bold_green"
 show()
 {
 python << EOF
-from __LOGO__ import LOGO
+from colorama import Fore, Style
 
-LOGO()
+# This is just going to be the Logo, no "Made by" or "Version" underneath
+def PURE_LOGO():
+  print(Style.BRIGHT+f"""
+   {Fore.CYAN}#####  ###### #####  #        ##    ####  ######          ####  #    # ###### #      #      
+   #    # #      #    # #       #  #  #    # #              {Fore.BLUE}#      #    # #      #      #      
+   #    # #####  #    # #      #    # #      #####           ####  ###### #####  #      #      
+   #####  #      #####  #      {Fore.RED}###### #      #                   # #    # #      #      #      
+   #   #  #      #      #      #    # #    # #              #    # #    # #      #      #      
+   #    # ###### #      ###### #    #  ####  {Fore.GREEN}######          ####  #    # ###### ###### ###### 
+                                                    #######                    
+    """)
 EOF
 echo -e "List of replace_shell commands:\n$i_blue --{ h  $i_white   >   $i_green  for help\n$i_blue --{ c   $i_white  >   $i_green  for cd & ls\n$i_blue --{ c-  $i_white  >   $i_green  to cd into directory(DO NOT ADD THE DIRECTORY AFTER c-, Just press enter) | Also does ls\n$i_blue --{ p  $i_white   >   $i_green  for pkg\n$i_blue --{ a  $i_white   >   $i_green  for apt\n$i_blue --{ py  $i_white  >   $i_green  for python\n$i_blue --{ php $i_white  > $i_green    To open a php file\n$i_blue --{ b  $i_white   >   $i_green  for bash\n$i_blue --{ g  $i_white   >   $i_green  for git\n$i_blue --{ w  $i_white   >   $i_green  for wget\n
 $i_blue --{ t-o  $i_white > $i_green    for termux-open\n$i_blue --{ cat  $i_white > $i_green    to print all code/data within a file\n$i_blue --{ p.2  $i_white > $i_green    for python2\n$i_blue --{ cl  $i_white  >  $i_green   for clear\n$i_blue --{ r f  $i_white > $i_green    for rm -rf File_Being_Closed\n\n $bold_green
