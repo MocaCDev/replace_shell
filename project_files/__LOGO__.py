@@ -17,6 +17,7 @@ def PURE_LOGO():
    #    # ###### #      ###### #    #  ####  {Fore.GREEN}######          ####  #    # ###### ###### ###### 
                                                     #######                    
     """)
+  time.sleep(0.8)
 
 def LOGO():
   print(Style.BRIGHT+f"""
