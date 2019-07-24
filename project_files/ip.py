@@ -14,7 +14,7 @@ class set_ip:
   def _get_ip(self):
     while self.loading and not self.has_ip:
       os.system('clear')
-      PURE_LOGOG()
+      PURE_LOGO()
       print('\n\n'+f'Getting IP--[{Fore.BLUE}..................{Fore.GREEN}]--'+'\n\n')
       time.sleep(1)
       os.system('clear')
