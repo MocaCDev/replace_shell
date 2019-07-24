@@ -52,6 +52,7 @@ show()
 # Copied and pasted it in
 python << EOF
 from colorama import Fore, Style
+import time
 
 # This is just going to be the Logo, no "Made by" or "Version" underneath
 def PURE_LOGO():
@@ -64,6 +65,7 @@ def PURE_LOGO():
    #    # ###### #      ###### #    #  ####  {Fore.GREEN}######          ####  #    # ###### ###### ###### 
                                                     #######                    
     """)
+  time.sleep(0.8)
 PURE_LOGO()
 EOF
 echo -e "List of replace_shell commands:\n$i_blue --{ h  $i_white   >   $i_green  for help\n$i_blue --{ c   $i_white  >   $i_green  for cd & ls\n$i_blue --{ c-  $i_white  >   $i_green  to cd into directory(DO NOT ADD THE DIRECTORY AFTER c-, Just press enter) | Also does ls\n$i_blue --{ p  $i_white   >   $i_green  for pkg\n$i_blue --{ a  $i_white   >   $i_green  for apt\n$i_blue --{ b  $i_white   >   $i_green  will ask for directory, then a bashable file(also used in command c-)\n$i_blue --{ g  $i_white   >   $i_green  for git\n$i_blue --{ w  $i_white   >   $i_green  for wget\n
