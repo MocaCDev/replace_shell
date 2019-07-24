@@ -6,13 +6,23 @@
 # Made by ARACADERISE
 # For Termux
 
-from __init__ import _project_stats_
+from __init__ import _project_stat_
 import os, sys, json, time
 from load import *
 from ip import *
 from __back__ import __sort__, __MAIN__
 from c import check
-from colorama import Fore, Style
+try:
+	from colorama import Fore, Style
+except ImportError:
+	# This should install colorama if it isn't already installed
+	os.system("pip install -r requirements.txt")
+	from colorama import Fore, Style
+# Just in case the above doesn't work, we will tell the user that the Python script cannot run
+# Due to import errors and we will ReDirect the user to the shell.sh file
+else:
+	print("Cannot run Python file due to importing problems. Will be booting into shell.sh")
+	os.system("bash shell.sh")
 # import ipaddress
 from myErrors import _err_
 t_com="""
@@ -29,6 +39,7 @@ PYTHON_VERSION = [
 ]
 try:
 	if sys.version_info > (3, float(3.5)):
+		__project_stat_()
 		if not os.path.exists('/data/data/com.termux/files/usr/bin/run'):
 			os.system("bash setup_run.sh")
 		time.sleep(6)
