@@ -6,6 +6,7 @@
 # Made by ARACADERISE
 # For Termux
 
+from __init__ import _project_stats_
 import os, sys, json, time
 from load import *
 from ip import *
