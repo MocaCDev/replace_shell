@@ -8,8 +8,8 @@
 # Directory EVER in the program, but take note on how we got into the directory: fileName/FolderName.
 # Applications Example:
 """ 
-c-
-file_name >> replace_shell/project_files
+c- : runs shell commands cd & ls
+file_name >> replace_shell/project_files : runs shell commands cd direcotyr/file_name and ls
 """
 
 clear
