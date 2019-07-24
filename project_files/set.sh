@@ -9,5 +9,5 @@ fi
 
 # IF "rep" IS ALREADY LOCATED IN THE /bin DIRECTORY IT WILL PRINT YOU THIS WARNING/ALERT MESSAGE
 if [ -d /data/data/com.termux/files/usr/bin/rep ]; then
-  echo "==> Looks like 'run' is already rooted to your bin directory. \nType 'rep' to run replace_shell!"
+  echo "==> Looks like 'rep' is already rooted to your bin directory. \nType 'rep' to run replace_shell!"
 fi
