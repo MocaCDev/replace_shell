@@ -1,4 +1,5 @@
-# LIST OF ERRORS THAT WILL POSSIBLE BE USED
+# This Python script file simply states a few possibly used errors
+# that will occur within the program
 class Errors:
   def __init__(self,msg):
     self.msg = msg
@@ -78,5 +79,7 @@ def _err_(type_,msg):
   if type_ == 8:
     t_8.KeyboardInterruptError()
     return "Error type: KeyboardInterrupt"
+  # Useless for the fact that I should know I hard-coded 8 errors, but just in case I forget
+  # it will possibly be useful
   else:
     raise Exception("That error was not located. Sorry")
