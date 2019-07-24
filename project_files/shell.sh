@@ -19,7 +19,7 @@ if [ -d /data/data/com.termux/files/usr/bin ]; then
     if [ ! -d /data/data/com.termux/files/home/replace_shell/project_files/ip ]; then
       echo "Compatible Python Versions \n IP file will be uploaded"
     else
-      echo ""
+      cat ip
     fi
   else
     echo "Python not compatible. Luckily, if you run compatible android systems, you can use this!"
@@ -78,7 +78,14 @@ ask()
   t=$true
   echo -e "$bold_green"
   read -p "#> " shell
-  if [ $shell == 'h' ]
+  # Although that there are truly other ways to boot the project within itself
+  # I don't want it to where the user can type rep within the application. Would
+  # Make no sense
+  if [ $shell == 'rep' ]
+  then
+    echo "You are already booted into replace_shell"
+    ask
+  elif [ $shell == 'h' ]
   then
     show
     ask
