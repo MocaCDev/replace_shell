@@ -35,3 +35,8 @@
   Possibly available for debian/ubuntu user(if I am able to)
   Giving the client a run-time throughout the whole program(as long as its running)
   Give the client a point in the application(ex saving your information and using it for a good)
+
+Developer Note:
+  AT NOT RIGHT IS IT OK TO TAKE THE CODE IN AS YOUR OWN, EVEN AT FAULT OF DELETING ALL SOURCE CODE AND CODING A NEW APPLICTION.
+  Copyright 2019, ARACADERISE/GetStuffDone, replace_shell
+  All rights reserved
