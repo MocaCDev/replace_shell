@@ -1,0 +1,37 @@
+  Hi, and Thank You for choosing replace_shell to make your terminal life much easier
+  I am going to start off with what I think is most important, how to get into directories.
+  
+  Within the application you will type c- to cd and ls, but then it will ask for a directory you want to get into.
+  But, take note, it only asks for a directory once. So, what if there is a file in the directory you want to get in?
+  Then all you'll need to do is type directory_name/folder_name, and keep adding / if there is another folder within that folder
+
+  So, why did I create replace_shell?
+  Many reasons, one major one is that I got so tired of doing the same commands over and over(or at least typing the extent of the commands
+  over and over)
+  So I just simply kicked back, openened my Chromebook and started writing some python script compatible
+  with the shell.sh file of which makes replace_shell what it is
+  
+  Not to worry though. Unlike my other tool Tool-Console, you do not always have to python into file.py
+  No, but simply all you'll have to do is type bash set.sh, and what will this do? Simple! It will root a command, rep, to your termuxs'
+  /bin directory(/data/data/com.termux/files/usr/bin) and thusly will let you type rep(only in main directory, get there by typing cd)
+  
+  Is it at its most advance?
+  No. Haha oh god no. There are plenty of terminal commands it hasn't covered. In version 1.0.0(original release) it just covers
+  most used terminal commands, example: git, wget, chmod, cd, ls, bash etc.
+  
+  Will it ever have commands of its own?
+  Possibly, but wouldn't rely too much on that happening. It would take more python scripts, more time and overall just more
+  of my life that I am spending on other projects I want to make.
+  So, as of right now, no there is no hard-coded replace_shell commands coming anytime soon, but if they do, I'll make sure they're good
+  
+  Updates to replace_shell?
+  Well, since replace_shell is a smaller project, possible updates or cut short due to the fact if I want to add something big it will
+  have to be a total new thing to the U.I of replace_shell, and I do not want to path replace_shell off into other stuff(ex rooting devices with python scripts)
+  it would really take away the point of replace_shell. But, as of right now, I am thinking about the following:
+  
+  A new look to the menu(all the commands)
+  Phone compatible
+  More android-based(more android platforms)
+  Possibly available for debian/ubuntu user(if I am able to)
+  Giving the client a run-time throughout the whole program(as long as its running)
+  Give the client a point in the application(ex saving your information and using it for a good)
