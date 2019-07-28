@@ -4,7 +4,7 @@
 AUTHOR = "ARACADERISE/GetStuffDone"
 VERSION = "1.0.1"
 STARTED = "July 10th, 2019"
-RELEASED = ""
+RELEASED = "July 29, 2019"
 TYPE = "Android Platform Based, Termux"
 ANDROID_PLATS = ["Posix","Oreo","Cupcake","Pie","Kitkat"]
 
