@@ -39,7 +39,6 @@ PYTHON_VERSION = [
 ]
 try:
 	if sys.version_info > (3, float(3.5)):
-		_project_stat_()
 		if not os.path.exists('/data/data/com.termux/files/usr/bin/rep'):
 			os.system("bash set.sh")
 		time.sleep(6)
@@ -214,5 +213,5 @@ finally:
 		}
 		with open('final_load.json','w') as f_j:
 				json.dump(finalized_data, f_j, indent=2, sort_keys=True)
-		return "Load done with exit status",1078
+		return "Load done with exit status",1078,_project_stat_()
 	_data_()
