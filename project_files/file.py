@@ -21,8 +21,7 @@ except ImportError:
 # Just in case the above doesn't work, we will tell the user that the Python script cannot run
 # Due to import errors and we will ReDirect the user to the shell.sh file
 else:
-	print("Cannot run Python file due to importing problems. Will be booting into shell.sh")
-	os.system("bash shell.sh")
+	raise Exception("Cannot run Python file due to importing problems. Will be booting into shell.sh")
 # import ipaddress
 from myErrors import _err_
 t_com="""
