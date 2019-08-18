@@ -7,16 +7,16 @@ class Errors:
   def ExceptionError(self):
     raise Exception(self.msg)
     return self.msg
-  def OverFlowError(self):
+  def OverFlowError_(self):
     raise OverflowError(self.msg)
     return self.msg
   def WarningError(self):
     raise Warning(self.msg)
     return self.msg
-  def RuntimeError(self):
+  def RuntimeError_(self):
     raise RuntimeError(self.msg)
     return self.msg
-  def UserWarning(self):
+  def UserWarning_(self):
     raise UserWarning(self.msg)
     return self.msg
   def InterruptedErrorE(self):
