@@ -59,16 +59,16 @@ def _err_(type_,msg):
     t_1.ExceptionError()
     return "Error type: Exception"
   if type_ == 2:
-    t_2.OverFlowError()
+    t_2.OverFlowError_()
     return "Error type: OverFlow"
   if type_ == 3:
     t_3.WarningError()
     return "Error type: Warning"
   if type_ == 4:
-    t_4.RuntimeError()
+    t_4.RuntimeError_()
     return "Error type: Runtime"
   if type_ == 5:
-    t_5.UserWarning()
+    t_5.UserWarning_()
     return "Error type: User warning"
   if type_ == 6:
     t_6.InterruptedErrorE()
