@@ -1,0 +1,9 @@
+[DATA]
+    data_consists_of = [
+  {
+    "from_file": "main.py"
+  },
+  "to_file"
+]
+[SUCCESS_DATA]
+    success = Success storing data!
